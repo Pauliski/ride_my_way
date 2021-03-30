@@ -12,7 +12,6 @@ const Sidebar = () => {
             <div className='icon'>
                 <FaTimes className='close' onClick={toggle} />
                 <div className='sidebarMenu'>
-        
                 <ul className='sidebarUl'>{navbar.map(item =>(
                 <li className='sidebarLink' key={item}  onClick={toggle}><Link to={`/${item.toLowerCase()}`} >{item}</Link></li>
                 ))}</ul>
