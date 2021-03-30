@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Homepage from './Homepage';
 import SidebarContextProvider from './Context/SidebarContext';
 import Sidebar from './Sidebar';
+import Login from './Login';
 
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
     <Homepage path='/ride_my_way' />
       <Homepage path='/home' />
       <Homepage path='/' />
+      <Login path='/user' />
       
     </Router>
     </SidebarContextProvider>

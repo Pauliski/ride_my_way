@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedin, FaYoutube, FaInstagram, FaToggleOff } from 'react-icons/fa';
+import React, { useContext } from 'react'
+import { FaFacebookF, FaTwitter, FaLinkedin, FaYoutube, FaInstagram} from 'react-icons/fa';
 import {Link} from '@reach/router'
 import './style.css'
 import drive from './driver.mp4'
