@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa';
+import React, { useContext, useEffect } from 'react'
+import { FaFacebookF, FaTwitter, FaLinkedin, FaYoutube, FaInstagram, FaToggleOff } from 'react-icons/fa';
 import {Link} from '@reach/router'
 import './style.css'
 import drive from './driver.mp4'
@@ -7,7 +7,13 @@ import { SidebarContext } from './Context/SidebarContext';
 
 
 const Homepage = () => {
-    const {isOpen} = useContext(SidebarContext)
+    const {isOpen, toggle} = useContext(SidebarContext)
+    useEffect(() => {
+        if(isOpen === true){
+            toggle()
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     return (
         <div className={isOpen ? 'false' : ''}>
             <video autoPlay muted loop id="myVideo">
