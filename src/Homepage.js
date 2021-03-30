@@ -7,15 +7,10 @@ import { SidebarContext } from './Context/SidebarContext';
 
 
 const Homepage = () => {
-    const {isOpen, toggle} = useContext(SidebarContext)
-    useEffect(() => {
-        if(isOpen === true){
-            toggle()
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    const {isOpen} = useContext(SidebarContext)
+   
     return (
-        <div className={isOpen ? 'false' : ''}>
+        <div className={isOpen ? 'false' : 'Homepage'}>
             <video autoPlay muted loop id="myVideo">
             <source src={drive} type="video/mp4"  className='videoSource'/>
             Your browser does not support HTML5 video.

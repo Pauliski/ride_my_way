@@ -6,7 +6,7 @@ import { SidebarContext } from './Context/SidebarContext';
 
 const Navbar = () => {
     const navbar = ['Home', 'Service', 'About', 'Contact', 'Blog']
-     const {isOpen, toggle} = useContext(SidebarContext)
+     const {toggle} = useContext(SidebarContext)
     
 
     return ( 
@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className='bar'>
                 <FaBars className='Fabar' onClick={toggle}/>
             </div>
-            <Sidebar isOpen={isOpen} toggle={toggle}/>
+            <Sidebar/>
             <ul className='navUl'>{navbar.map(item =>(
                 
                 <li key={item}  className='navLink'><Link to={`/${item.toLowerCase()}`} >{item}</Link></li>
