@@ -10,7 +10,7 @@ const Homepage = () => {
     const {isOpen} = useContext(SidebarContext)
    
     return (
-        <div className={isOpen ? 'false' : 'Homepage'}>
+        <div className={isOpen ? 'false' : ''}>
             <video autoPlay muted loop id="myVideo">
             <source src={drive} type="video/mp4"  className='videoSource'/>
             Your browser does not support HTML5 video.

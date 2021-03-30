@@ -15,8 +15,9 @@ ReactDOM.render(
     <Sidebar />
     <Navbar />
     <Router>
-    <Homepage path='/' />
+    <Homepage path='/ride_my_way' />
       <Homepage path='/home' />
+      <Homepage path='/' />
       
     </Router>
     </SidebarContextProvider>
