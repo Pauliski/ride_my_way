@@ -1,14 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Navbar from './Navbar';
-// import {Router} from '@reach/router'
+ import {Router} from '@reach/router'
+import Homepage from './Homepage';
+import SidebarContextProvider from './Context/SidebarContext';
+import Sidebar from './Sidebar';
+
 
 ReactDOM.render(
   <React.StrictMode>
+    
+    <SidebarContextProvider>
+    <Sidebar />
     <Navbar />
-    <App />
+    <Router>
+    <Homepage path='/' />
+      <Homepage path='/home' />
+      
+    </Router>
+    </SidebarContextProvider>
+    
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

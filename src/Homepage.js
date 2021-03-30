@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaFacebookF, FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa';
 import {Link} from '@reach/router'
 import './style.css'
 import drive from './driver.mp4'
+import { SidebarContext } from './Context/SidebarContext';
 
 
 const Homepage = () => {
+    const {isOpen} = useContext(SidebarContext)
     return (
-        <div>
+        <div className={isOpen ? 'false' : ''}>
             <video autoPlay muted loop id="myVideo">
             <source src={drive} type="video/mp4"  className='videoSource'/>
             Your browser does not support HTML5 video.

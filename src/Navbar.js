@@ -1,14 +1,13 @@
-import React, { useState} from 'react';
+import React, { useContext} from 'react';
 import {Link} from '@reach/router'
 import { FaBars} from 'react-icons/fa';
 import Sidebar from './Sidebar';
+import { SidebarContext } from './Context/SidebarContext';
 
 const Navbar = () => {
     const navbar = ['Home', 'Service', 'About', 'Contact', 'Blog']
-    const [isOpen, setIsOpen] = useState(false)
-    const toggle = ()=>{
-        setIsOpen(!isOpen)
-        }
+     const {isOpen, toggle} = useContext(SidebarContext)
+    
 
     return ( 
         <div>
