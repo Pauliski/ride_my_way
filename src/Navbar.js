@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className='bar'>
                 <FaBars className='Fabar' onClick={toggle}/>
             </div>
-            <Sidebar/>
+            <Sidebar navbar={navbar}/>
             <ul className='navUl'>{navbar.map(item =>(
                 
                 <li key={item}  className='navLink'><Link to={`/${item.toLowerCase()}`} >{item}</Link></li>

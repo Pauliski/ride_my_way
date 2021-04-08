@@ -1,52 +1,40 @@
-import React, {useContext, useState} from 'react'
-import { SidebarContext } from './Context/SidebarContext'
+import React, { useContext } from "react";
+import { SidebarContext } from "./Context/SidebarContext";
+import Input from "./Input";
+import {Link} from '@reach/router'
+import Layout1 from "./LayerOne";
+
 
 const Login = () => {
-    const [login, setLogin] = useState(false)
-    const {isOpen} = useContext(SidebarContext)
+  const { isOpen } = useContext(SidebarContext);
 
-   return ( login ? 
-         
-            <div className={`loginPage ${isOpen ? false : ''}`}>
-
-            <form action="" className='loginForm'>
-                
-                    <label htmlFor="login" className='loginLabel'>User Login</label>
-                    
-                    
-                    <input type="text" placeholder='Username or Email'/>
-                    <input type="password" placeholder='Password'/>
-                    <span className='loginSpan'>
-                        <button className='loginButton'>Login</button>
-                        New Users<span className='linkToSignup' onClick={()=>setLogin(false)}>  Sign up</span>
-                    </span>
-                    
-            </form>
-        </div>
-    :   <div>
-        <div className={`loginPage ${isOpen ? false : ''}`}>
-            <form action="" className='loginForm signupForm'>
+  return (
+    <Layout1>
         
-            <label htmlFor="signup" className='signupLabel'>New User Signup</label>
-            
-            
-            <input type="text" placeholder='Username'/>
-            <input type="text" placeholder='Email Adress'/>
-            <input type="text" inputmode="numeric" placeholder='Mobile Number'/> 
-            <input type="text" placeholder='Home Adress'/>
-            <input type="password" placeholder='Password'/>
-            <input type="password" placeholder='Confirm Password'/>
-            <span className='loginSpan'>
-                <button className='loginButton'>Sign Up</button>
-                Existing Users<span to='/signup' className='linkToSignup' onClick={()=>setLogin(true)}> Sign In</span>
-            </span>
-            
-    </form>
-        </div>
-    
-</div>
-   )
-    
-}
+      <div className={`loginPage ${isOpen ? false : ""}`}>
+          <div className='head'> 
+              <h1 >Ride-my-way</h1>
+              <div style={{backgroundColor: 'transparent', position: 'relative'}}>
+                  <hr className='underline'/>
+              </div>
+          </div>
+          
+        <form action="" className="loginForm">
 
-export default Login
+          <Input type="text" placeholder="Username or Email" />
+          <Input type="password" placeholder="Password" />
+          <span className="loginSpan">
+           <Link to='/dashboard'><button className="loginButton">Login</button></Link>
+            New Users
+            <a href="/signup" className="linkToSignup">
+              {" "}
+              Sign up
+            </a>
+          </span>
+        </form>
+      </div>
+    </Layout1>
+  );
+};
+
+export default Login;
