@@ -24,7 +24,7 @@ ReactDOM.render(
         </Router>
       </ThemeContextProvider>
       <Router>
-        <Homepage path="/ride_my_way" />
+  
         <Homepage path="/home" />
         <Homepage exact path="/" />
         <Login path="/login" />
