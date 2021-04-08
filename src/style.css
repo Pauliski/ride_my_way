@@ -468,9 +468,40 @@ footer {
   width: 200px;
   height: 200px;
 }
+.drivers{
+  width: 100px;
+  height: 100px;
+}
+.tripIcons{
+  font-size: 20px;
+}
+.tripDetails{
+  position: relative;
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.tripDetails:hover{
+  border: 1px solid black;
+ 
+}
+.tripDetails >.secondChild{
+  left: 200px;
+  margin-top: 10px;
+  position: absolute;
+
+}
+.road, .location, .date{
+  margin-left: 20px;
+  font-size: 14px;
+}
 @media screen and (max-width: 768px) {
-  .navUl {
+  .navUl, .dashboardFirstDiv, .dashboardThirdDiv {
     display: none;
+  }
+  .tripDetails{
+    width: 100vw;
   }
   .board1,
   .board2 {
