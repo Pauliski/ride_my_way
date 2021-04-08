@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/ride_my_way/static/css/main.90359719.chunk.css",
-    "main.js": "/ride_my_way/static/js/main.86f69cff.chunk.js",
-    "main.js.map": "/ride_my_way/static/js/main.86f69cff.chunk.js.map",
+    "main.css": "/ride_my_way/static/css/main.b23eaadc.chunk.css",
+    "main.js": "/ride_my_way/static/js/main.1670edfa.chunk.js",
+    "main.js.map": "/ride_my_way/static/js/main.1670edfa.chunk.js.map",
     "runtime-main.js": "/ride_my_way/static/js/runtime-main.b6a75f7f.js",
     "runtime-main.js.map": "/ride_my_way/static/js/runtime-main.b6a75f7f.js.map",
-    "static/js/2.694f2e9e.chunk.js": "/ride_my_way/static/js/2.694f2e9e.chunk.js",
-    "static/js/2.694f2e9e.chunk.js.map": "/ride_my_way/static/js/2.694f2e9e.chunk.js.map",
+    "static/js/2.0aee5d97.chunk.js": "/ride_my_way/static/js/2.0aee5d97.chunk.js",
+    "static/js/2.0aee5d97.chunk.js.map": "/ride_my_way/static/js/2.0aee5d97.chunk.js.map",
     "index.html": "/ride_my_way/index.html",
-    "static/css/main.90359719.chunk.css.map": "/ride_my_way/static/css/main.90359719.chunk.css.map",
-    "static/js/2.694f2e9e.chunk.js.LICENSE.txt": "/ride_my_way/static/js/2.694f2e9e.chunk.js.LICENSE.txt",
-    "static/media/driver.47fa5572.mp4": "/ride_my_way/static/media/driver.47fa5572.mp4"
+    "static/css/main.b23eaadc.chunk.css.map": "/ride_my_way/static/css/main.b23eaadc.chunk.css.map",
+    "static/js/2.0aee5d97.chunk.js.LICENSE.txt": "/ride_my_way/static/js/2.0aee5d97.chunk.js.LICENSE.txt",
+    "static/media/Paul.20124625.jpg": "/ride_my_way/static/media/Paul.20124625.jpg",
+    "static/media/car1.7d592615.png": "/ride_my_way/static/media/car1.7d592615.png",
+    "static/media/car2.d30faa14.jpg": "/ride_my_way/static/media/car2.d30faa14.jpg",
+    "static/media/car3.7fe88e44.jpg": "/ride_my_way/static/media/car3.7fe88e44.jpg",
+    "static/media/car4.02f748fe.jpg": "/ride_my_way/static/media/car4.02f748fe.jpg",
+    "static/media/driver.47fa5572.mp4": "/ride_my_way/static/media/driver.47fa5572.mp4",
+    "static/media/style.css": "/ride_my_way/static/media/driver.667127ac.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b6a75f7f.js",
-    "static/js/2.694f2e9e.chunk.js",
-    "static/css/main.90359719.chunk.css",
-    "static/js/main.86f69cff.chunk.js"
+    "static/js/2.0aee5d97.chunk.js",
+    "static/css/main.b23eaadc.chunk.css",
+    "static/js/main.1670edfa.chunk.js"
   ]
 }
