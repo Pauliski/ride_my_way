@@ -24,9 +24,9 @@ ReactDOM.render(
         </Router>
       </ThemeContextProvider>
       <Router>
-  
+      <Homepage exact path="/" />
         <Homepage path="/home" />
-        <Homepage exact path="/" />
+        
         <Login path="/login" />
         <Signup path="/signup" />
       </Router>
