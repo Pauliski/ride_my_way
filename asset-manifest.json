@@ -1,27 +1,31 @@
 {
   "files": {
-    "main.css": "/ride_my_way/static/css/main.b23eaadc.chunk.css",
-    "main.js": "/ride_my_way/static/js/main.1670edfa.chunk.js",
-    "main.js.map": "/ride_my_way/static/js/main.1670edfa.chunk.js.map",
-    "runtime-main.js": "/ride_my_way/static/js/runtime-main.b6a75f7f.js",
-    "runtime-main.js.map": "/ride_my_way/static/js/runtime-main.b6a75f7f.js.map",
-    "static/js/2.0aee5d97.chunk.js": "/ride_my_way/static/js/2.0aee5d97.chunk.js",
-    "static/js/2.0aee5d97.chunk.js.map": "/ride_my_way/static/js/2.0aee5d97.chunk.js.map",
-    "index.html": "/ride_my_way/index.html",
-    "static/css/main.b23eaadc.chunk.css.map": "/ride_my_way/static/css/main.b23eaadc.chunk.css.map",
-    "static/js/2.0aee5d97.chunk.js.LICENSE.txt": "/ride_my_way/static/js/2.0aee5d97.chunk.js.LICENSE.txt",
-    "static/media/Paul.20124625.jpg": "/ride_my_way/static/media/Paul.20124625.jpg",
-    "static/media/car1.7d592615.png": "/ride_my_way/static/media/car1.7d592615.png",
-    "static/media/car2.d30faa14.jpg": "/ride_my_way/static/media/car2.d30faa14.jpg",
-    "static/media/car3.7fe88e44.jpg": "/ride_my_way/static/media/car3.7fe88e44.jpg",
-    "static/media/car4.02f748fe.jpg": "/ride_my_way/static/media/car4.02f748fe.jpg",
-    "static/media/driver.47fa5572.mp4": "/ride_my_way/static/media/driver.47fa5572.mp4",
-    "static/media/style.css": "/ride_my_way/static/media/driver.667127ac.jpg"
+    "main.css": "/static/css/main.293e7b4c.chunk.css",
+    "main.js": "/static/js/main.d201b8eb.chunk.js",
+    "main.js.map": "/static/js/main.d201b8eb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19dbb2c6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19dbb2c6.js.map",
+    "static/js/2.413c3177.chunk.js": "/static/js/2.413c3177.chunk.js",
+    "static/js/2.413c3177.chunk.js.map": "/static/js/2.413c3177.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.293e7b4c.chunk.css.map": "/static/css/main.293e7b4c.chunk.css.map",
+    "static/js/2.413c3177.chunk.js.LICENSE.txt": "/static/js/2.413c3177.chunk.js.LICENSE.txt",
+    "static/media/Paul.20124625.jpg": "/static/media/Paul.20124625.jpg",
+    "static/media/car1.7d592615.png": "/static/media/car1.7d592615.png",
+    "static/media/car2.d30faa14.jpg": "/static/media/car2.d30faa14.jpg",
+    "static/media/car3.7fe88e44.jpg": "/static/media/car3.7fe88e44.jpg",
+    "static/media/car4.02f748fe.jpg": "/static/media/car4.02f748fe.jpg",
+    "static/media/driver.47fa5572.mp4": "/static/media/driver.47fa5572.mp4",
+    "static/media/style.css": "/static/media/driver.667127ac.jpg",
+    "static/media/pass1.01a6963f.jpg": "/static/media/pass1.01a6963f.jpg",
+    "static/media/pass2.690fb448.jpg": "/static/media/pass2.690fb448.jpg",
+    "static/media/pass3.5896c9f4.jpg": "/static/media/pass3.5896c9f4.jpg",
+    "static/media/pass4.273f9109.jpg": "/static/media/pass4.273f9109.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b6a75f7f.js",
-    "static/js/2.0aee5d97.chunk.js",
-    "static/css/main.b23eaadc.chunk.css",
-    "static/js/main.1670edfa.chunk.js"
+    "static/js/runtime-main.19dbb2c6.js",
+    "static/js/2.413c3177.chunk.js",
+    "static/css/main.293e7b4c.chunk.css",
+    "static/js/main.d201b8eb.chunk.js"
   ]
 }
