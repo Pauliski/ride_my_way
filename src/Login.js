@@ -26,10 +26,10 @@ const Login = () => {
           <span className="loginSpan">
            <Link to='/dashboard'><button className="loginButton">Login</button></Link>
             New Users
-            <a href="/signup" className="linkToSignup">
+            <Link to="/signup" className="linkToSignup">
               {" "}
               Sign up
-            </a>
+            </Link>
           </span>
         </form>
       </div>
