@@ -41,8 +41,8 @@ const Signup = () => {
              <Link to='/signup'><button className="loginButton">Sign Up</button></Link> 
               Existing Users
               <Link to='/login' className="linkToSignup">
-                {" "}
-                Sign In
+                <h3> Sign In</h3>
+               
               </Link>
             </span>
           </form>
