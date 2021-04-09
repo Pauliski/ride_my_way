@@ -40,7 +40,7 @@ const Signup = () => {
             <span className="loginSpan">
              <Link to='/signup'><button className="loginButton">Sign Up</button></Link> 
               Existing Users
-              <Link to="/login" className="linkToSignup">
+              <Link to='/login' className="linkToSignup">
                 {" "}
                 Sign In
               </Link>

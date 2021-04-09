@@ -25,9 +25,9 @@ ReactDOM.render(
       </ThemeContextProvider>
       <Router>
       <Homepage exact path="/" />
-        <Homepage exact path="/home" />
-        <Login exact path="/login" />
-        <Signup exact path="/signup" />
+      <Homepage exact path="/home" />
+      <Login exact path="/login" />
+      <Signup exact path="/signup" />
       </Router>
     </SidebarContextProvider>
   </React.StrictMode>,
