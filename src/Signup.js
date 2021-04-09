@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { SidebarContext } from "./Context/SidebarContext";
 import Input from "./Input";
 import Layout1 from "./LayerOne";
+import {Link} from '@reach/router';
 
 const Signup = () => {
   const { isOpen } = useContext(SidebarContext);
@@ -37,12 +38,12 @@ const Signup = () => {
             ))}
 
             <span className="loginSpan">
-              <button className="loginButton">Sign Up</button>
+             <Link to='/signup'><button className="loginButton">Sign Up</button></Link> 
               Existing Users
-              <a href="/login" className="linkToSignup">
+              <Link to="/login" className="linkToSignup">
                 {" "}
                 Sign In
-              </a>
+              </Link>
             </span>
           </form>
         </div>

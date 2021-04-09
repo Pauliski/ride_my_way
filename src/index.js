@@ -26,7 +26,6 @@ ReactDOM.render(
       <Router>
       <Homepage exact path="/" />
         <Homepage path="/home" />
-        
         <Login path="/login" />
         <Signup path="/signup" />
       </Router>
