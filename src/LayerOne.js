@@ -16,7 +16,7 @@ const Layout1 = (props) => {
       <ul className="navUl">
         {navbar.map((item) => (
           <li key={item} className="navLink">
-            <a href={`/${item.toLowerCase()}`}>{item}</a>
+            <Link to={`/${item.toLowerCase()}`}>{item}</Link>
           </li>
         ))}
       </ul>
