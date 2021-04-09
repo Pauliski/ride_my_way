@@ -5,8 +5,8 @@ import Layout2 from './LayoutTwo';
 import { ThemeContext } from './Context/ThemeContext';
 
 const AvailableRide = () => {
-    const { light, dark, isLightTheme, toggleTheme } = useContext(ThemeContext);
-  const theme = isLightTheme ? light : dark;
+    const { toggleTheme, displayTheme, color } = useContext(ThemeContext);
+  let theme = color[displayTheme]
     return ( 
         <Layout2 
         toggle={toggleTheme}
