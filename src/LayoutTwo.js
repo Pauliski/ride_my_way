@@ -30,7 +30,7 @@ const Layout2 = (props) => {
         ulClassName="navUl"
       >
         <img className="profilePix" alt="trans" src={Pauliski} />
-        <button onClick={props.toggle} className='themeChangeButton'>Change Theme</button>
+        <button onClick={props.toggle} className='themeChangeButton' >Change Theme</button>
       </MapList>
 
 
@@ -44,8 +44,8 @@ const Layout2 = (props) => {
         >
           <button
             className="orderButton"
-            style={{ backgroundColor: `${props.elementTheme}` }}
-          >
+            style={{ backgroundColor: `${props.elementTheme}`, color: `${props.textTheme}`, border: `1px solid ${props.textTheme}`   }}
+          > 
             {" "}
             + Order{" "}
           </button>

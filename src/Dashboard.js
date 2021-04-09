@@ -7,8 +7,8 @@ import { ThemeContext } from "./Context/ThemeContext";
 import Notification from "./Notification";
 
 const Dashboard = () => {
-  const { light, dark, isLightTheme, toggleTheme } = useContext(ThemeContext);
-  const theme = isLightTheme ? light : dark;
+  const { toggleTheme, displayTheme, color } = useContext(ThemeContext);
+  let theme = color[displayTheme]
   return (
     <Layout2
       backgroundColor={theme.background}

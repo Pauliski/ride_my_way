@@ -243,7 +243,7 @@ body {
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: 100%;
+  height: 95%;
   background-color: #0d0d0d;
   display: flex;
   /* align-items: center; */
@@ -290,6 +290,7 @@ body {
 }
 .false {
   display: none;
+  /* pointer-events: none; */
 }
 .dispNone {
   display: none;
@@ -416,12 +417,12 @@ footer {
   text-decoration: none;
 }
 .notification {
-  background-color: gray;
+  /* background-color: gray; */
   color: white;
 }
-.notification:nth-of-type(even) {
-  background-color: #eceae0;
-  color: #333;
+.notification:nth-of-type(odd) {
+  background-color: #eceae0 !important;
+  color: #333 !important;
 }
 .notificationPlane {
   display: inline-block;
