@@ -27,8 +27,7 @@ const Login = () => {
            <Link to='/dashboard'><button className="loginButton">Login</button></Link>
             New Users
             <Link to="/signup" className="linkToSignup">
-              {" "}
-              Sign up
+              <button>Sign up</button>
             </Link>
           </span>
         </form>
