@@ -19,8 +19,7 @@ export const authNavbar = [
   "Home",
   "Recent trips",
   "Available Rides",
-  "Contact",
-  "Blog",
+  "Blog"
 ];
 
 export const navbar = ["Home", "Service", "About", "Contact", "Blog"];
@@ -51,5 +50,24 @@ export const Recent = [
   }, 
   {
       id: 4, name: 'Britney', src: pass4, drive: <GiSteeringWheel className='tripIcons'/>, depart: <FcDepartment className='tripIcons' />, location: <BiMap className='tripIcons' />, trip:'Lekki - Isolo'
+  }
+]
+
+export const messages = [
+  {
+      sender: 'Pauliski',
+      message: 'Order your first ride at a discount of 30%'
+  },
+  {
+      sender: 'Ride my way',
+      message: 'Welcome to our platform, your satisfaction is our priority'
+  },
+  {
+      sender: 'Shehu from Ride-my-way',
+      message: 'Welcome to our platform, your satisfaction is our priority'
+  },
+  {
+      sender: 'Shukurah from Ride-my-way',
+      message: 'Welcome to our platform, your satisfaction is our priority'
   }
 ]

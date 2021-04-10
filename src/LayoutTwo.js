@@ -1,19 +1,19 @@
 import React, { useState, useContext } from "react";
+import { Link } from "@reach/router";
 import Pauliski from "./Paul.jpg";
 import { FaBars } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { SidebarContext } from "../src/Context/SidebarContext";
 import Sidebar from "./Sidebar";
 import { MapList } from "./Map";
 import { authNavbar, themeDropdown } from "./Array";
-import { DashboardSide} from "./Map";
+import { DashboardSide } from "./Map";
 import { DashboardSidebar } from "./Array";
-import './style.css'
-
+import "./style.css";
 
 const Layout2 = (props) => {
   const [isDropdown, setIsDropdown] = useState(false);
   const { toggle } = useContext(SidebarContext);
-  
 
   return (
     <div className="layer2">
@@ -30,9 +30,24 @@ const Layout2 = (props) => {
         ulClassName="navUl"
       >
         <img className="profilePix" alt="trans" src={Pauliski} />
-        <button onClick={props.toggle} className='themeChangeButton' >Change Theme</button>
-      </MapList>
+        <IoMdArrowDropdown
+          style={{ color: `${props.textTheme}`, marginRight: '120px' }}
+          onClick={() => setIsDropdown(!isDropdown)}
 
+        />
+        <div
+          className={`dropdown-content ${
+            isDropdown ? "dropdown-content-show" : ""
+          }`}
+          style={{
+            color: `${props.textTheme}`,
+            backgroundColor: `${props.backgroundTheme}`,
+          }}
+        >
+          <Link to="/profile">Update Profile</Link>
+          <Link to="/">Logout</Link>
+        </div>
+      </MapList>
 
       <div className="dashboardContainer">
         <div
@@ -44,17 +59,28 @@ const Layout2 = (props) => {
         >
           <button
             className="orderButton"
-            style={{ backgroundColor: `${props.elementTheme}`, color: `${props.textTheme}`, border: `1px solid ${props.textTheme}`   }}
-          > 
+            style={{
+              backgroundColor: `${props.elementTheme}`,
+              color: `${props.textTheme}`,
+              border: `1px solid ${props.textTheme}`,
+            }}
+          >
             {" "}
             + Order{" "}
           </button>
-          <DashboardSide items={DashboardSidebar} color={props.textTheme} ulClassName="DashboardSidebar" className='DashboardSidebarList'/>
+          <DashboardSide
+            items={DashboardSidebar}
+            color={props.textTheme}
+            ulClassName="DashboardSidebar"
+            className="DashboardSidebarList"
+          >
+            <button onClick={props.toggle} className="themeChangeButton">
+              Change Theme
+            </button>
+          </DashboardSide>
         </div>
-        
-        <div className="dashboardSecondtDiv">
-        {props.children}
-        </div>
+
+        <div className="dashboardSecondtDiv">{props.children}</div>
 
         <div
           className="dashboardThirdDiv"

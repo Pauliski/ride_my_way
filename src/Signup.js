@@ -40,8 +40,8 @@ const Signup = () => {
             <span className="loginSpan">
              <Link to='/signup'><button className="loginButton">Sign Up</button></Link> 
               Existing Users
-              <Link to='/login' className="linkToSignup">
-                <button>Sign In</button> 
+              <Link to='/login' style={{color: 'black'}}>
+                <button className="linkToSignup">Sign In</button> 
                
               </Link>
             </span>
