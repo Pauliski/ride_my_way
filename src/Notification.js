@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {messages} from './NotificationTemplate'
+import {messages} from './Array'
 import {AiFillDelete} from 'react-icons/ai'
 import { ThemeContext } from './Context/ThemeContext';
 import './style.css'
@@ -11,8 +11,8 @@ const Notification = () => {
     return ( 
         <div >
             {messages.map(message =>(
-                <div key={message.message} className='notification' style={{backgroundColor: theme.background, color: theme.text}}>
-                    <div className='messageContent'>{message.sender} <span  className='messageBody'>{message.message}</span><AiFillDelete className='delete'/></div>
+                <div key={message.sender} className='notification' style={{backgroundColor: theme.background, color: theme.text}}>
+                    <div className='messageContent'>{message.sender} <div key={message.message} className='messageBody'>{message.message}</div><AiFillDelete className='delete'/></div>
                 </div>
             ))}
         </div>

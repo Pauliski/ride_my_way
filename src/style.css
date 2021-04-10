@@ -165,30 +165,27 @@ body {
   color: white;
 }
 .loginButton {
-  color: black;
-  background-color: transparent;
-  border: 1px solid white;
-  font-weight: bold;
-  color: blanchedalmond;
   padding: 5px;
-  width: 70px;
   margin-top: 20px;
   margin-right: 95px;
-}
-.loginButton:hover {
-  background-color: black;
-  color: white;
 }
 .loginSpan {
   color: white;
 }
-.linkToSignup {
-  color: royalblue;
+.linkToSignup, .loginButton {
+  background-color: transparent;
+  color: #fff;
+  margin-left: 5px;
+  padding: 5px;
+  width: 70px;
+  border: 1px solid white;
 }
-.linkToSignup:hover {
+.linkToSignup:hover, .loginButton:hover {
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
+  color: #333;
+  background-color: #fff;
 }
 
 .signupForm {
@@ -333,11 +330,13 @@ footer {
 .profilePix {
   width: 35px;
   border-radius: 50%;
+  
 }
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #000000;
+  top: 22px;
+  font-size: 22px;
   min-width: 120px;
   z-index: 1;
 }
@@ -361,6 +360,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 5px 3px;
+  
 }
 .dashboardContainer {
   display: grid;
@@ -441,7 +441,8 @@ footer {
 }
 .messageBody {
   position: absolute;
-  left: 25%;
+  display: inline-block;
+  left: 43%;
 }
 .delete {
   position: absolute;
@@ -501,9 +502,12 @@ footer {
   .navUl, .dashboardFirstDiv, .dashboardThirdDiv {
     display: none;
   }
-  .tripDetails{
+  
+  .tripDetails, .notification{
     width: 100vw;
+    margin-left: 20px;
   }
+  
   .board1,
   .board2 {
     opacity: 0.7;
@@ -529,5 +533,17 @@ footer {
   }
   25% {
     bottom: 0px;
+  }
+}
+@media screen and (max-width: 1035px) {
+  .messageBody{
+    height: auto;
+  }
+  .messageBody{
+    position: relative;
+    display: block;
+    margin: 0;
+    /* margin-left: 10px; */
+    left: 0;
   }
 }

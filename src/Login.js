@@ -26,8 +26,8 @@ const Login = () => {
           <span className="loginSpan">
            <Link to='/dashboard'><button className="loginButton">Login</button></Link>
             New Users
-            <Link to="/signup" className="linkToSignup">
-              <button>Sign up</button>
+            <Link to="/signup">
+              <button className="linkToSignup">Sign up</button>
             </Link>
           </span>
         </form>
