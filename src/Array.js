@@ -16,10 +16,9 @@ import pass4 from './pictures/pass4.jpg'
 import './style.css'
 
 export const authNavbar = [
-  "Home",
+  "Notification",
   "Recent trips",
-  "Available Rides",
-  "Blog"
+  "Available Rides"
 ];
 
 export const navbar = ["Home", "Service", "About", "Contact", "Blog"];

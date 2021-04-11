@@ -12,10 +12,12 @@ const Sidebar = (props) => {
                 <FaTimes className='close' onClick={toggle} />
                 <div className='sidebarMenu'>
                 <ul className='sidebarUl'>{props.navbar.map(item =>(
-                <li className='sidebarLink' key={item}  onClick={toggle}><a href={`/${item.toLowerCase()}`} >{item}</a></li>
+                <li className='sidebarLink' key={item}  onClick={toggle}><a href={`/${item.toLowerCase().replace(/ /g,"")}`} >{item}</a></li>
                 ))}</ul>
                 
                 </div>
+                <div onClick={toggle}>{props.children}</div>
+                
             </div>
             
         </div>

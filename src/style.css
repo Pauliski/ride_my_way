@@ -498,6 +498,34 @@ footer {
   margin-left: 20px;
   font-size: 14px;
 }
+.changeColorButton{
+display: flex;
+justify-content: center;
+}
+.changeColorButton > button{
+width: 200px;
+height: 40px;
+background-color: transparent;
+border: 2px solid white;
+color: white;
+border-radius: 5px;
+}
+.changeColorButton > button:hover{
+  background-color: white;
+  color: #0d0d0d;
+}
+@media screen and (max-width: 1035px) {
+  .messageBody{
+    height: auto;
+  }
+  .messageBody{
+    position: relative;
+    display: block;
+    margin: 0;
+    /* margin-left: 10px; */
+    left: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .navUl, .dashboardFirstDiv, .dashboardThirdDiv {
     display: none;
@@ -535,15 +563,4 @@ footer {
     bottom: 0px;
   }
 }
-@media screen and (max-width: 1035px) {
-  .messageBody{
-    height: auto;
-  }
-  .messageBody{
-    position: relative;
-    display: block;
-    margin: 0;
-    /* margin-left: 10px; */
-    left: 0;
-  }
-}
+
