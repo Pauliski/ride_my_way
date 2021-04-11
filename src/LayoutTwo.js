@@ -20,7 +20,12 @@ const Layout2 = (props) => {
       <div className="bar">
         <FaBars className="Fabar" onClick={toggle} />
       </div>
-      <Sidebar navbar={authNavbar} />
+      <Sidebar navbar={authNavbar}>
+        <div className="changeColorButton"><button onClick={props.toggle} >
+          Change Theme
+        </button></div>
+        
+      </Sidebar>
 
       <MapList
         items={authNavbar}
@@ -31,9 +36,8 @@ const Layout2 = (props) => {
       >
         <img className="profilePix" alt="trans" src={Pauliski} />
         <IoMdArrowDropdown
-          style={{ color: `${props.textTheme}`, marginRight: '120px' }}
+          style={{ color: `${props.textTheme}`, marginRight: "120px" }}
           onClick={() => setIsDropdown(!isDropdown)}
-
         />
         <div
           className={`dropdown-content ${
