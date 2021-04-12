@@ -65,8 +65,41 @@ export const DashboardSide = (props) => {
 
 export const Available = (props) => {
   return (
-    <div className="AvailableContainer">
-      {props.items.map((item) => (
+    <div className='cardContainer' style={{backgroundColor: `${props.backgroundColor}`}}>
+
+
+{props.items.map(item =>(
+  <div className="flip-card" key={item.id}>
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
+      <img src={item.src} alt="Avatar" style={{width:'300px'}} />
+    </div>
+    <div className="flip-card-back">
+    <div><img src={item.passport} alt="Avatar" style={{width:'130px', height:'130px', borderRadius: '50%'}} />
+   </div>
+      <h3>{item.name}</h3> 
+      <p>{item.years} years Experience</p> 
+      <p>Car model: {item.carModel}</p>
+      <Link to={`/availablerides/order/${item.id}`}><button>Order Now</button></Link>
+      
+    </div>
+  </div>
+</div>
+))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* {props.items.map((item) => (
         <div key={item.id} className="AvailableContent">
           <div>
             <img src={item.src} alt="pix" className="AvailableRidePix" />
@@ -77,7 +110,7 @@ export const Available = (props) => {
             <h4>Location: {item.location}</h4>
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
