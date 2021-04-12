@@ -5,14 +5,14 @@ import {GiSteeringWheel} from 'react-icons/gi'
 import {FcDepartment} from 'react-icons/fc'
 import {BiMap} from 'react-icons/bi'
 
-import car1 from './pictures/car1.png'
-import car2 from './pictures/car2.jpg'
-import car3 from './pictures/car3.jpg'
-import car4 from './pictures/car4.jpg'
-import pass1 from './pictures/pass1.jpg'
-import pass2 from './pictures/pass2.jpg'
-import pass3 from './pictures/pass3.jpg'
-import pass4 from './pictures/pass4.jpg'
+import car5 from './pictures/car5.png'
+import car6 from './pictures/car6.png'
+import car7 from './pictures/car7.png'
+import car8 from './pictures/car8.png'
+import pass1 from './pictures/pass1.png'
+import pass2 from './pictures/pass2.png'
+import pass3 from './pictures/pass3.png'
+import pass4 from './pictures/pass4.png'
 import './style.css'
 
 export const authNavbar = [
@@ -31,10 +31,10 @@ export const DashboardSidebar = [
 
 
 export const AvailableRides =[
-  {name: 'Sule', location: 'Kaduna', id: 1, src: car1 },
-  {name: 'Kolade', location: 'Lagos', id: 2, src: car2},
-  {name: 'Peter', location: 'Lagos', id: 3, src: car3},
-  {name: 'Chibuzor', location: 'Imo', id: 4, src: car4} 
+  {name: 'Sule', location: 'Kaduna', id: 1, src: car5, passport: pass1, years: 4, carModel: 'Land Rover 2021' },
+  {name: 'Kolade', location: 'Lagos', id: 2, src: car6, passport: pass2, years: 5, carModel: 'DIscussion Continue (Toyata)'},
+  {name: 'Peter', location: 'Lagos', id: 3, src: car7, passport: pass3, years: 6, carModel: 'Siena'},
+  {name: 'Chibuzor', location: 'Imo', id: 4, src: car8, passport: pass4, years: 2, carModel: 'Hummer 2'} 
 ]
 
 export const Recent = [

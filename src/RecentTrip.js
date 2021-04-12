@@ -5,8 +5,6 @@ import { MapRecentTrips } from './Map';
 import { Recent } from './Array';
 
 const RecentTrip = () => {
-    // const { light, dark, isLightTheme, toggleTheme } = useContext(ThemeContext);
-    // const theme = isLightTheme ? light : dark;
     const { toggleTheme, displayTheme, color } = useContext(ThemeContext);
   let theme = color[displayTheme]
     return ( 

@@ -13,8 +13,9 @@ const AvailableRide = () => {
         backgroundTheme={theme.background}
         textTheme={theme.text}
         elementTheme={theme.element}
+        background={theme.background}
         >
-            <Available items={AvailableRides}/>
+            <Available items={AvailableRides} backgroundColor={theme.background}/>
         </Layout2>
         
      );

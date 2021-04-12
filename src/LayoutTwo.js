@@ -16,7 +16,7 @@ const Layout2 = (props) => {
   const { toggle } = useContext(SidebarContext);
 
   return (
-    <div className="layer2">
+    <div className="layer2" style={{backgroundColor: `${props.background}`}}>
       <div className="bar">
         <FaBars className="Fabar" onClick={toggle} />
       </div>
