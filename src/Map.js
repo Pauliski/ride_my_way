@@ -80,7 +80,7 @@ export const Available = (props) => {
       <h3>{item.name}</h3> 
       <p>{item.years} years Experience</p> 
       <p>Car model: {item.carModel}</p>
-      <Link to={`/availablerides/order/${item.id}`}><button>Order Now</button></Link>
+      <button onClick={()=>props.toggleModal(item)}>Order Now</button>
       
     </div>
   </div>
@@ -139,7 +139,10 @@ export const MapRecentTrips = (props) => {
               {item.depart}
               <span className='date'>Departing: 26/3/2021 - 8:17 PM</span>
             </div>
+            
           </div>
+          {/* <div className='thirdChildContainer'><div className='thirdChild'><img src={item.map} alt="map" className="map" style={{width: '100px', height: '100px'}} /></div></div> */}
+          
         </div>
       ))}
     </div>
