@@ -37,10 +37,11 @@ const Layout2 = (props) => {
         backgroundColor={props.backgroundTheme}
         ulClassName="navUl"
       >
-        <div className='logo'>
+         {/* <div className='logo'>
         <img src={logo} alt="hello" style={{width: '50px', height: '40px'}}/>
-        <p></p>
-      </div>
+        <p>Ride-my-way</p>
+      </div> */}
+       
         <img className="profilePix" alt="trans" src={Pauliski} />
         <IoMdArrowDropdown
           style={{ color: `${props.textTheme}`, marginRight: "160px" }}
