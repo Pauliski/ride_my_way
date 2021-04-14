@@ -1,5 +1,6 @@
 import { Link } from "@reach/router";
 import React from "react";
+import logo from './pictures/logo.png'
 import "./style.css";
 
 export const Map = (props) => {
@@ -20,6 +21,13 @@ export const MapList = (props) => {
       className={props.ulClassName}
       style={{ backgroundColor: `${props.backgroundColor}` }}
     >
+       <div className='logo'>
+         
+           <img src={logo} alt="hello" style={{width: '40px', height: '40px', marginLeft: '20px'}}/>
+        
+        
+        <p>Ride-my-way</p>
+      </div>
       {props.items.map((item) => (
         <li key={item} className={props.className}>
           <Link
@@ -34,6 +42,7 @@ export const MapList = (props) => {
         </li>
       ))}
       {props.children}
+     
     </ul>
   );
 };
@@ -75,7 +84,7 @@ export const Available = (props) => {
       <img src={item.src} alt="Avatar" style={{width:'300px'}} />
     </div>
     <div className="flip-card-back">
-    <div><img src={item.passport} alt="Avatar" style={{width:'130px', height:'130px', borderRadius: '50%'}} />
+    <div><img src={item.passport} alt="Avatar" style={{width:'120px', height:'120px', borderRadius: '50%'}} />
    </div>
       <h3>{item.name}</h3> 
       <p>{item.years} years Experience</p> 
