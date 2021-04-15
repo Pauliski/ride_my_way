@@ -10,8 +10,9 @@ const Layout1 = (props) => {
   return (
     <div>
       <div className="bar">
-        <FaBars className="Fabar" onClick={toggle} />
+        
       </div>
+      <FaBars className="Fabar" onClick={toggle} />
       <Sidebar navbar={navbar} />
       <ul className="navUl">
         {navbar.map((item) => (

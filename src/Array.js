@@ -76,3 +76,15 @@ export const messages = [
       id: getRandomStr(10)
   }
 ]
+
+export const driversMessages =[]
+//   {sender: 'Ride-my-way',
+//   message: 'This is to inform you that our customer satisfactory is our priority as well as your well being, please stay safe as we prepare your first trip with us',
+//   id: getRandomStr(12)
+// },
+// {
+// sender: 'Ride-my-way',
+//   message: 'Welcome to our platform, please enjoy your ride with us',
+//   id: getRandomStr(12)
+// }
+

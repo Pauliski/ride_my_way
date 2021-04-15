@@ -10,6 +10,8 @@ import Signup from "./Signup";
 import ThemeContextProvider from "./Context/ThemeContext";
 import AvailableRide from "./AvailableRide";
 import RecentTrip from "./RecentTrip";
+import DriverNotification from "./DriverNotification";
+import DriverDashboard from "./DriverDashboard";
 
 
 ReactDOM.render(
@@ -21,6 +23,8 @@ ReactDOM.render(
           <Dashboard exact path="/notification" />
           <AvailableRide exact path='/availablerides' />
           <RecentTrip exact path='/recenttrips' />
+          <DriverDashboard exact path='/driver/dashboard' />
+          <DriverDashboard exact path='/driver/notification' />
         </Router>
       </ThemeContextProvider>
       <Router>

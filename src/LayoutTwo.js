@@ -19,10 +19,11 @@ const Layout2 = (props) => {
   return (
     <div className="layer2" style={{backgroundColor: `${props.background}`}}>
       
-      <div className="bar">
-        <FaBars className="Fabar" onClick={toggle} />
-      </div>
      
+      <div className="Fabar">
+        <FaBars style={{float: 'right', paddingTop: '5PX', marginRight: '5px'}}  onClick={toggle} />
+      </div>
+      
       <Sidebar navbar={authNavbar}>
         <div className="changeColorButton"><button onClick={props.toggle} >
           Change Theme
@@ -95,7 +96,7 @@ const Layout2 = (props) => {
           </DashboardSide>
         </div>
 
-        <div className="dashboardSecondtDiv">{props.children}</div>
+        <div className="dashboardSecondDiv"><div className='space'></div>{props.children}</div>
 
         <div
           className="dashboardThirdDiv"
