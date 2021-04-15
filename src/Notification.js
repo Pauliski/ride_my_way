@@ -14,7 +14,7 @@ const Notification = () => {
     setDisplayMessage(filteredItem) 
     }
     return ( 
-        <div >
+        <div>
             {diplayMessage.map(message =>(
                 <div key={message.id} className='notification' style={{backgroundColor: theme.background, color: theme.text}}>
                     <div className='messageContent'>{message.sender} <div className='abs'><span className='messageBody' title={message.message}>{message.message}</span><span><AiFillDelete className='delete' onClick={()=>Delete(message.id)}/></span></div>

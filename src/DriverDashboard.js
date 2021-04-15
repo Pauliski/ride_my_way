@@ -1,14 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 // import { FaFacebookF, FaTwitter, FaLinkedin, FaYoutube, FaInstagram} from 'react-icons/fa';
 import "./style.css";
 // import DashboardNavbar from './DashboardNavbar'
 import Layout2 from "./LayoutTwo";
 import { ThemeContext } from "./Context/ThemeContext";
-import Notification from "./Notification";
+import DriverNotification from "./DriverNotification";
 
-const Dashboard = () => {
+const DriverDashboard = () => {
+  
   const { toggleTheme, displayTheme, color } = useContext(ThemeContext);
   let theme = color[displayTheme]
+  
   return (
     <Layout2
       backgroundColor={theme.background}
@@ -18,11 +20,11 @@ const Dashboard = () => {
       backgroundTheme={theme.background}
       elementTheme={theme.element}
     >
-       
-        <Notification />
+        
+        <DriverNotification />
         
     </Layout2>
   );
 };
 
-export default Dashboard;
+export default DriverDashboard;

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { messages } from "./Array";
+import React, { useContext, useEffect, useState } from "react";
+import { driversMessages, messages } from "./Array";
 import { navigate } from "@reach/router";
 import Modal from "./Modal";
 import { Available } from "./Map";
@@ -7,11 +7,22 @@ import { AvailableRides } from "./Array";
 import Layout2 from "./LayoutTwo";
 import { ThemeContext } from "./Context/ThemeContext";
 import { getRandomStr } from "./IdGenerator";
+import './style.css'
 
 const AvailableRide = () => {
+  const [notify, setNotify] = useState([])
   const [showModal, setShowModal] = useState(false);
   const [destination, setDestination] = useState({ from: "", to: "" });
   const [itemList, setItemList] = useState("");
+
+  useEffect(() => {
+    const notificationFromStorage = JSON.parse(localStorage.getItem('driversMsg')) || []
+    setNotify(notificationFromStorage)
+  }, [])
+  useEffect(() => {
+    localStorage.setItem('driversMsg', JSON.stringify(notify))
+
+  }, [notify])
   const toggleModal = (item) => {
     setShowModal(!showModal);
     setItemList(item);
@@ -21,12 +32,19 @@ const AvailableRide = () => {
   }
   const ChangeTo = e => setDestination({from: destination.from, to: e.target.value})
   const placeOrder = () => {
-    const defaultMessageTemplate = {
+    const defaultUsersNotification = {
       sender: "Ride-my-way",
       message: `Order Details,  Car Model: ${itemList.carModel} Location: ${destination.from}  to Destination: ${destination.to}. please wait for our drivers confirmatory message`,
       id: getRandomStr(10),
     };
-    messages.unshift(defaultMessageTemplate);
+    const defaultDriverNotification={
+      sender: "Ride-my-way",
+      message: `We have an order for you details, Passengers name: Pauliski, location: ${destination.from},  destinatio: ${destination.to}. please Confirm your availability by clicking the 'Yes' button otherwise click No`,
+      id: getRandomStr(10),
+    }
+    setNotify(prev => [defaultDriverNotification, ...prev])
+    // notify.unshift(defaultDriverNotification);
+    messages.unshift(defaultUsersNotification);
     navigate("/notification");
   };
   const { toggleTheme, displayTheme, color } = useContext(ThemeContext);
@@ -39,6 +57,7 @@ const AvailableRide = () => {
       elementTheme={theme.element}
       background={theme.background}
     >
+      
       <Available
         items={AvailableRides}
         backgroundColor={theme.background}
