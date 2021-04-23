@@ -4,7 +4,13 @@ import {HiStatusOnline} from 'react-icons/hi'
 import {GiSteeringWheel} from 'react-icons/gi'
 import {FcDepartment} from 'react-icons/fc'
 import {BiMap} from 'react-icons/bi'
+import { ImUsers } from "react-icons/im";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { MdStarHalf } from "react-icons/md"
+import { GrCompliance} from "react-icons/gr"
+import { FcCancel} from "react-icons/fc"
 import {getRandomStr} from './IdGenerator'
+
 
 import car5 from './pictures/car5.png'
 import car6 from './pictures/car6.png'
@@ -88,3 +94,52 @@ export const driversMessages =[]
 //   id: getRandomStr(12)
 // }
 
+export const chartArray =[
+  {month: 'January', totalTrip: 55, cancelTrips: 5},
+  {month: 'February', totalTrip: 70, cancelTrips: 17},
+  {month: 'March', totalTrip: 45, cancelTrips: 10},
+  {month: 'April', totalTrip: 32, cancelTrips: 3},
+  {month: 'May', totalTrip: 23, cancelTrips: 7},
+  {month: 'June', totalTrip: 65, cancelTrips: 5},
+  {month: 'July', totalTrip: 64, cancelTrips: 1},
+  {month: 'August', totalTrip: 47, cancelTrips: 3},
+  {month: 'September', totalTrip: 51, cancelTrips: 19},
+  {month: 'October', totalTrip: 50, cancelTrips: 9},
+  {month: 'November', totalTrip: 77, cancelTrips: 23},
+  {month: 'December', totalTrip: 80, cancelTrips: 31}
+]
+
+
+export const driverTopSection = [
+  {
+    icon: <ImUsers className='likes' />, text: 'LIKES', amount: '500+'
+  }
+ 
+]
+let sumCancel = 0;
+    for (let i = 0; i < chartArray.length; i++) {
+      sumCancel += chartArray[i].cancelTrips;
+    }
+    let sum = 0;
+    for (let i = 0; i < chartArray.length; i++) {
+      sum += chartArray[i].totalTrip;
+    }
+
+export const driverTopSection2 = [
+  {
+    icon: <GrCompliance className='completeTrip' />, text: 'Completed Trips', amount: sum
+  },
+  {
+    icon: <FcCancel className='cancelTrip' />, text: 'Cancel Trip', amount: sumCancel
+  }
+]
+export const CardDetails =[
+  {
+    passport: pass1,
+    name: ' Shehu',
+    contact: 2348023423490,
+    location: ' Ire Akari Estate, Isolo, Lagos',
+    destination: ' Apapa, Lagos',
+    id: getRandomStr(5)
+  }
+]

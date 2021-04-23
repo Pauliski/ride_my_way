@@ -34,6 +34,11 @@ const Homepage = () => {
               <button className="boardButton">Join Us</button>
             </Link>
           </div>
+          <div className="joinUs">
+            <Link to="/driver">
+              <button className="boardButton">SIGN UP TO DRIVE</button>
+            </Link>
+          </div>
         </h1>
 
         <footer>

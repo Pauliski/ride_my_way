@@ -12,6 +12,10 @@ import AvailableRide from "./AvailableRide";
 import RecentTrip from "./RecentTrip";
 import DriverNotification from "./DriverNotification";
 import DriverDashboard from "./DriverDashboard";
+import Check from "./Check";
+import Chart from "./Chart";
+import SideIcon from "./SideIcon";
+import Card from "./Card";
 
 
 ReactDOM.render(
@@ -22,9 +26,13 @@ ReactDOM.render(
           <Dashboard exact path="/dashboard" />
           <Dashboard exact path="/notification" />
           <AvailableRide exact path='/availablerides' />
+          <Chart path="/chart" />
           <RecentTrip exact path='/recenttrips' />
           <DriverDashboard exact path='/driver/dashboard' />
           <DriverDashboard exact path='/driver/notification' />
+          <Check exact path='/driver' />
+          <Card exact path='/card' />
+
         </Router>
       </ThemeContextProvider>
       <Router>

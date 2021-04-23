@@ -157,3 +157,50 @@ export const MapRecentTrips = (props) => {
     </div>
   );
 };
+
+export const TopSection =(props)=>{
+  return(
+  <div className='headContainer' style={{display: 'flex'}}>
+    {props.items.map(item => (
+      <div className="checkHead" key={item.text}>
+      <div className="likesContainer">
+        {item.icon}
+      </div>
+      <div className="checkHeadText">
+        {item.text} <div>{item.amount }</div>
+      </div>
+    </div>
+    ))}{props.children}</div>
+  )
+}
+
+export const TopSection2 = (props) =>{
+  return(
+    <div className='checkt'>
+      
+        <div className="checkHead" key={props.text}>
+        <div className="likesContainer">
+          {props.icon}
+        </div>
+        <div className="checkHeadText">
+          {props.text} <div>{props.amount }</div>
+        </div>
+      </div>
+      {props.children}</div>
+    )
+}
+
+export const TopSec = (props)=>{
+  return(
+    <div className='checkt'>
+        <div className="checkHead" key={props.text}>
+        <div className="likesContainer">
+          {props.icon}
+        </div>
+        <div className="checkHeadText">
+          {props.text} <div>{props.amount }</div>
+        </div>
+      </div>
+      </div>
+    )
+}
