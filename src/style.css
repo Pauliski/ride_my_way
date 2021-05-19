@@ -339,6 +339,9 @@ footer {
   width: 35px;
   height: 35px;
   border-radius: 50%;
+  margin-left: 0.5rem;
+  margin-top: 10px;
+  border: 5px solid yellow;
 }
 .dropdown-content {
   display: none;
@@ -368,6 +371,7 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 5px 3px;
+  margin-top: -5px;
 }
 .dashboardContainer {
   display: grid;
@@ -692,6 +696,7 @@ footer {
   width: 98%;
   margin: 0;
   flex-direction: column;
+  transition: margin-left 0.5s;
   
 }
 .checkt{
@@ -885,7 +890,7 @@ footer {
   align-items: center;
   
   
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .card-container{
   background-color: #e5e5e5;
@@ -949,7 +954,7 @@ box-sizing: border-box;
   margin-left: 10px;
 }
 
-  
+ 
 
 
 @media screen and (max-width: 1035px) {

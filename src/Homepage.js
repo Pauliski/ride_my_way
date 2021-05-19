@@ -35,7 +35,7 @@ const Homepage = () => {
             </Link>
           </div>
           <div className="joinUs">
-            <Link to="/driver">
+            <Link to="/driver/dashboard">
               <button className="boardButton">SIGN UP TO DRIVE</button>
             </Link>
           </div>

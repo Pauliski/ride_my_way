@@ -42,10 +42,10 @@ const Check = () => {
     console.log("hello");
   };
 
-  useEffect(() => {
-    const cancelledTrip = JSON.parse(localStorage.getItem("cancelled")) || 0;
-    const completedTrip = JSON.parse(localStorage.getItem("trips")) || 0;
-  }, []);
+  // useEffect(() => {
+  //   const cancelledTrip = JSON.parse(localStorage.getItem("cancelled")) || 0;
+  //   const completedTrip = JSON.parse(localStorage.getItem("trips")) || 0;
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem("cancelled", JSON.stringify(totalTripCancel));
@@ -103,32 +103,7 @@ const Check = () => {
           <div style={{ display: "flex" }} className="">
             <Card accept={AcceptFunc} reject={RejectFunc} toggleDisable ={disableFunc} disable={disable}/>
             </div>
-            {/* <div className="checkBody" style={{ overflow: "scroll" }}>
-              <div style={{ display: "flex" }} className="checkBodyContent">
-                <div>
-                  <img src={pass} alt="" className="picture" />
-                  <h5 style={{ marginTop: "0px" }}>Mr Pauliski</h5>
-                </div>
-
-                <div style={{ marginLeft: "30px", marginTop: "10px" }}>
-                  Location: Mushin <br />
-                  Destination: Isolo
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    marginTop: "10px",
-                    marginLeft: "40px",
-                  }}
-                >
-                  <button style={{ marginBottom: "5px" }} onClick={AcceptFunc}>
-                    Accept
-                  </button>
-                  <button onClick={RejectFunc}>Reject</button>
-                </div>
-              </div>
-            </div> */}
+            
 
             <div className="chart">
               {" "}
