@@ -16,6 +16,9 @@ import Check from "./Check";
 import Chart from "./Chart";
 import SideIcon from "./SideIcon";
 import Card from "./Card";
+import RecentTemplate from "./RecentTemplate";
+import DriverSignup from "./DriverSignup";
+import SignupUpload from "./SignupUpload";
 
 
 ReactDOM.render(
@@ -28,10 +31,13 @@ ReactDOM.render(
           <AvailableRide exact path='/availablerides' />
           <Chart path="/chart" />
           <RecentTrip exact path='/recenttrips' />
-          <DriverDashboard exact path='/driver/dashboard' />
+          {/* <DriverDashboard exact path='/driver/dashboard' /> */}
           <DriverDashboard exact path='/driver/notification' />
-          <Check exact path='/driver' />
+          <Check exact path='/driver/dashboard' />
           <Card exact path='/card' />
+          <RecentTemplate path='/hello' />
+          <DriverSignup path='/driver/signup' />
+          <SignupUpload path='/driver/signuppages' />
 
         </Router>
       </ThemeContextProvider>

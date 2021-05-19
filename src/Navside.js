@@ -1,5 +1,5 @@
 import React from 'react';
-import pass from "./pictures/pass1.png";
+import Pauliski from "./Paul.jpg";
 import { AiFillSetting } from "react-icons/ai";
 import './style.css'
 
@@ -10,7 +10,7 @@ const Navside = (props) => {
         <div className={`checkSide2 ${props.toggleSideIcon ? 'false' : ''}`}>
          
         <div className="imgContainer">
-          <img src={pass} alt="" className="picture sidePic2" />
+          <img src={Pauliski} alt="" className="picture sidePic2" />
           <div>
             <span>Pauliski</span>{" "}
             <div style={{ display: "flex", marginTop: "10px" }}>
