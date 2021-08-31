@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import Sidebar from "./Sidebar";
 import { SidebarContext } from "./Context/SidebarContext";
@@ -14,8 +14,8 @@ const Navbar = () => {
       <FaBars className="Fabar" onClick={toggle} />
       <Sidebar navbar={navbar} />
       <ul className="navUl">
-        {navbar.map((item) => (
-          <li key={item} className="navLink">
+        {navbar.map((item, i) => (
+          <li key={i} className="navLink">
             <Link to={`/${item.toLowerCase()}`}>{item}</Link>
           </li>
         ))}

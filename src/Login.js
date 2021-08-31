@@ -1,33 +1,65 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SidebarContext } from "./Context/SidebarContext";
-import Input from "./Input";
-import {Link} from '@reach/router'
+import { Input, Password } from "./element/Input";
+import { Link, useHistory } from "react-router-dom";
 import Layout1 from "./LayerOne";
-
+import { LoginUser } from "./store/actions/types/userAction";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
+  const history = useHistory()
+  
+  const dispatch = useDispatch();
+  const [body, setBody] = useState({});
   const { isOpen } = useContext(SidebarContext);
+  useEffect(() => {
+    setBody(body);
+  }, [body]);
+
+  function handleChange(e) {
+    const { value, name } = e.target;
+    if (name === "email") {
+      setBody({ ...body, [name]: value });
+    }
+    if (name === "password") {
+      setBody({ ...body, [name]: value });
+    }
+  }
+  //Handle sumbmit function
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    LoginUser(body, dispatch, history)
+    
+  };
 
   return (
     <Layout1>
-        
       <div className={`loginPage ${isOpen ? false : ""}`}>
-          <div className='head'> 
-              <h1 >Ride-my-way</h1>
-              <div style={{backgroundColor: 'transparent', position: 'relative'}}>
-                  <hr className='underline'/>
-              </div>
+        <div className="head">
+          <h1>Ride-my-way </h1>
+          <div style={{ backgroundColor: "transparent", position: "relative" }}>
+            <hr className="underline" />
           </div>
-          
-        <form action="" className="loginForm">
+        </div>
 
-          <Input type="text" placeholder="Username or Email" />
-          <Input type="password" placeholder="Password" />
+        <form onSubmit={handleSubmit} className="loginForm">
+          <Input
+            holder="Username or Email"
+            onChange={handleChange}
+            name="email"
+          />
+          <Password
+            type="password"
+            holder="Password"
+            onChange={handleChange}
+            name="password"
+          />
           <span className="loginSpan">
-           <Link to='/dashboard'><button className="loginButton">Login</button></Link>
+            <button className="loginButton">Login</button>
             New Users
             <Link to="/signup">
-              <button className="linkToSignup">Sign up</button>
+              <span className="linkToSignup">Sign up</span>
             </Link>
           </span>
         </form>

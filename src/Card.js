@@ -14,6 +14,7 @@ const Card = (props) => {
               <div className='card-picture-container'>
             
             <img src={item.passport} alt="" className="card-picture"/>
+           
           </div>
           <div className='card-info'>
             <h3 className='card-name'>{item.name}</h3>

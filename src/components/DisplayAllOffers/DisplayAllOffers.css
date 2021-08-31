@@ -1,0 +1,17 @@
+.display-all-offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 1024px) {
+    .display-all-offers{
+        padding: 0;
+        margin: 0;
+        height: 100%;
+       
+    }
+}
+/* @media only screen and (max-width: 855px) {
+    .display-offer{
+        width: 90%;
+    }
+} */

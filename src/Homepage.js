@@ -6,20 +6,26 @@ import {
   FaYoutube,
   FaInstagram,
 } from "react-icons/fa";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import "./style.css";
 import drive from "./driver.mp4";
 import { SidebarContext } from "./Context/SidebarContext";
 import LayerOne from "./LayerOne";
+import auth from "./auth";
+import UserSideBar from "./components/sidebar/UserSideBar";
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/Footer/Footer";
 
-const Homepage = () => {
+const Homepage = (props) => {
   const { isOpen } = useContext(SidebarContext);
 
   return (
-<div>
+<div >
  <LayerOne>
-         
-      <div className={isOpen ? "false" : ""}>
+          {/* <Navbar /> */}
+         {/* <UserSideBar /> */}
+      <main className={isOpen ? "false" : ""}>
+        <div>
         <video autoPlay muted loop id="myVideo">
           <source src={drive} type="video/mp4" className="videoSource" />
           Your browser does not support HTML5 video.
@@ -39,10 +45,16 @@ const Homepage = () => {
               <button className="boardButton">SIGN UP TO DRIVE</button>
             </Link>
           </div>
+          
         </h1>
+        {/* <button onClick ={()=>{auth.login(()=>{props.history.push("/app")})}}>Login</button> */}
+        </div>
+       
+       
 
-        <footer>
-          <div>
+        {/* <footer> */}
+          {/* <div className='footer'>
+            <div>
             <h3>
               About Us
             </h3>
@@ -79,9 +91,10 @@ const Homepage = () => {
               <FaInstagram />
             </h4>
           </div>
-         
-        </footer>
-      </div>
+          </div> */}
+         <Footer />
+        {/* </footer> */}
+      </main>
     </LayerOne>
 
 </div>

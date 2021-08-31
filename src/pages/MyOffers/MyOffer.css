@@ -1,0 +1,5 @@
+.driver-offers{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+}

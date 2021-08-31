@@ -1,0 +1,19 @@
+POST http://localhost:5000/api/driver/signup
+
+###
+POST http://localhost:5000/api/passenger/signup
+Content-Type: application/json
+
+{
+    "username": "Ki",
+    "email": "kingzgmail.com",
+    "mobile": "858",
+    "password": "te",
+    "confirm_password": "teamphixit"
+}
+
+###
+POST http://localhost:5000/api/driver/login
+
+###
+POST http://localhost:5000/api/passenger/login
