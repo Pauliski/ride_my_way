@@ -10,17 +10,15 @@ import "./EditProfileCard.css";
 
 function EditProfileCard() {
   const user = useSelector((state) => state.user);
+  const [data, setData ] = useState({})
   const [valid, setValid] = useState({ firstName: true, lastName: true });
-  const [names, setNames] = useState({
-    firstName: user.firstName,
-    lastName: user.lastName,
-  });
+  const [names, setNames] = useState({});
   const email = user.email;
   const [disabled, setDisabled] = useState(true);
   const [btnDisabled, setBtnDisabled] = useState(false);
   const [innerText, setInnerText] = useState("Edit");
   const dispatch = useDispatch();
-  const nameError = /^[a-zA-Z]{2,}[\-]?[a-zA-Z]{1,}$/;
+  const nameError = /^[a-zA-Z]{2,}$/;
 
   // ***** handler for when the value of input field is changing *****
   const handleChange = (e) => {
@@ -55,6 +53,7 @@ function EditProfileCard() {
 
   // ***** Edit handler for firstName & lastName *****
   const handleEdit = (e) => {
+    e.preventDefault()
     if (innerText === "Edit") {
       setInnerText("Save");
       setDisabled(false);
@@ -90,84 +89,174 @@ function EditProfileCard() {
   }, [valid])
 
   return (
+
+
+
+
+
     <div>
-      <div className="profile-container">
-        <div className="personal-profile">
-          <div className="card-one">
-            <div className="profile-image-conatiner">
-              <img src={Passport} className="profile-image" alt="" />
+    <div className="profile-container">
+      <div className="personal-profile">
+      <div className="profile-image-conatainer">
+            <img src={Passport} className="profile-image" alt="" />
+          </div>
+          <div className="form-container">
+            <form >
+            <span>First Name</span>
+            <div
+              style={{
+                color: "red",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              {!valid.firstName ? "Invalid first name" : ""}
             </div>
-            <div className="personal-info-container">
-              <div>Personal info</div>
-              <hr />
-              <div
-                style={{
-                  color: "red",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                {!valid.firstName ? "Invalid first name" : ""}
-              </div>
-              <div className="personal-info-details">
-                <div className="names">First Name</div>
-                <Input
+              <Input
                   id="profile-input"
-                  className={disabled ? "" : "input-disabled-false"}
+                  className={`input-new-class ${disabled ? "" : "input-disabled-false"}`}
                   Value={names.firstName}
                   disabled={disabled}
                   name="firstName"
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-              </div>
-
-              <div
-                style={{
-                  color: "red",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                {!valid.lastName ? "Invalid last name" : ""}
-              </div>
-              <div className="personal-info-details">
-                <div className="names">Last Name</div>
-                <Input
+                 <span>Last Name</span>
+                 <div
+              style={{
+                color: "red",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              {!valid.lastName ? "Invalid last name" : ""}
+            </div>
+              <Input
                   id="profile-input"
                   Value={names.lastName}
-                  className={disabled ? "" : "input-disabled-false"}
-                  disabled={disabled}
+                  className={`input-new-class ${disabled ? "" : "input-disabled-false"}`}
                   onChange={handleChange}
                   onBlur={handleBlur}
+                  disabled={disabled}
                   name="lastName"
                 />
-              </div>
-              <button className="edit-name-button" onClick={handleEdit} disabled={btnDisabled}>
-                {innerText}
-              </button>
-            </div>
-          </div>
-          <div className="card-two-three-conatiner">
-            <div className="card-two">
-              <div className="contact-info">
-                <div>Contact Information</div>
-                <hr />
-                <div className="contact-info-details">
-                  <div>Email</div>
-                  <button>{user.email}</button>
+
+                <span>Email</span>
+              <Input
+                  id="profile-input"
+                  className="input-new-class"
+                  Value={user.email}
+                  disabled={true}
+                  name="email"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                 <span>Mobile Number</span>
+              <Input
+                  id="profile-input"
+                  Value={data.mobileNumber}
+                  className="input-new-class"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  disabled={true}
+                  name="mobileNumber"
+                />
+               
+                <div style={{display:'flex', justifyContent: 'center'}}>
+                  <button className="edit-name-button" onClick={handleEdit}>
+              {innerText}
+            </button>
                 </div>
-                <div className="contact-info-details">
-                  <div>Mobile Number</div>
-                  <button>{user.mobileNumber}</button>
-                </div>
-              </div>
-            </div>
-            <div className="card-three"></div>
+                
+            </form>
+          
           </div>
-        </div>
+       
       </div>
     </div>
+  </div>
+
+
+
+
+    // <div>
+    //   <div className="profile-container">
+    //     <div className="personal-profile">
+    //       <div className="card-one">
+    //         <div className="profile-image-conatiner">
+    //           <img src={Passport} className="profile-image" alt="" />
+    //         </div>
+    //         <div className="personal-info-container">
+    //           <div>Personal info</div>
+    //           <hr />
+    //           <div
+    //             style={{
+    //               color: "red",
+    //               display: "flex",
+    //               justifyContent: "center",
+    //             }}
+    //           >
+    //             {!valid.firstName ? "Invalid first name" : ""}
+    //           </div>
+    //           <div className="personal-info-details">
+    //             <div className="names">First Name</div>
+    //             <Input
+    //               id="profile-input"
+    //               className={disabled ? "" : "input-disabled-false"}
+    //               Value={names.firstName}
+    //               disabled={disabled}
+    //               name="firstName"
+    //               onChange={handleChange}
+    //               onBlur={handleBlur}
+    //             />
+    //           </div>
+
+    //           <div
+    //             style={{
+    //               color: "red",
+    //               display: "flex",
+    //               justifyContent: "center",
+    //             }}
+    //           >
+    //             {!valid.lastName ? "Invalid last name" : ""}
+    //           </div>
+    //           <div className="personal-info-details">
+    //             <div className="names">Last Name</div>
+    //             <Input
+    //               id="profile-input"
+    //               Value={names.lastName}
+    //               className={disabled ? "" : "input-disabled-false"}
+    //               disabled={disabled}
+    //               onChange={handleChange}
+    //               onBlur={handleBlur}
+    //               name="lastName"
+    //             />
+    //           </div>
+    //           <button className="edit-name-button" onClick={handleEdit} disabled={btnDisabled}>
+    //             {innerText}
+    //           </button>
+    //         </div>
+    //       </div>
+    //       <div className="card-two-three-conatiner">
+    //         <div className="card-two">
+    //           <div className="contact-info">
+    //             <div>Contact Information</div>
+    //             <hr />
+    //             <div className="contact-info-details">
+    //               <div>Email</div>
+    //               <button>{user.email}</button>
+    //             </div>
+    //             <div className="contact-info-details">
+    //               <div>Mobile Number</div>
+    //               <button>{user.mobileNumber}</button>
+    //             </div>
+    //           </div>
+    //         </div>
+    //         <div className="card-three"></div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 }
 

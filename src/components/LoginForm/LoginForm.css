@@ -1,7 +1,26 @@
+.login-form-container{
+    display: flex;
+    align-items: center;
+}
 .login-form{
-    height: 400px;
     width: 350px;
+    padding: 15px;
     background-color: lightblue;
     border-radius: 10px;
-
+   
+}
+.driver-login-button{
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 30%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.driver-login-button:hover{
+    background-color: black;
+    color: white;
 }

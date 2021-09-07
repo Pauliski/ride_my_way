@@ -8,14 +8,15 @@ export const RegisterUser = async (userData, dispatch, history) => {
   console.log(userData, dispatch, history);
   try {
     
-    const response = await axios({
+    const res = await axios({
       method: "post",
       baseURL: "http://localhost:3000/v1/passenger/register",
       data: userData,
     });
-    if (response.status === 201) {
-      console.log(response.data)
-      const token = response.data.signedToken;
+
+    if (res.status === 201) {
+      console.log(res.data)
+      const token = res.data.signedToken;
       localStorage.setItem("jwtToken", token);
       dispatch(currentUser({firstName: userData.firstName, lastName: userData.lastName, email: userData.email}))
       history.push("/dashboard");
@@ -23,7 +24,7 @@ export const RegisterUser = async (userData, dispatch, history) => {
     
   } catch (err) {
     // dispatch(setError({error: err.response.data.message}))
-    console.log(err.response.data)
+    console.log(err.response)
   }
 };
 

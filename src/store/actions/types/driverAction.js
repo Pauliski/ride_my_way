@@ -35,7 +35,7 @@ export const updateDriver = async (names, dispatch)=>{
   // console.log(userData);
   try {
     const token = localStorage.getItem('driverToken');
-  const response = await axios({
+  const res = await axios({
     method: "put",
     headers: {
       "Authorization": `Bearer ${token}`,
@@ -45,20 +45,21 @@ export const updateDriver = async (names, dispatch)=>{
     baseURL: "http://localhost:3000/v1/driver",
     data: names,
   });
-  if (!response.ok) {
-    const err = await response;
-    console.log("failure: ", err);
-    // throw new Error(err);
+  if (res.status === 200) {
+    // console.log('names === ', names);
+    // console.log(res);
+    dispatch(currentDriver({...names}))
+    dispatch(setDriverUpdate({...names}));
   }
 
   // const token = response.data.signedToken;
   // axios.defaults.headers.common['Authorization'] = token;
   // setAuthToken(token);
-  dispatch(currentDriver({...names}))
-dispatch(setDriverUpdate({...names}));
+ 
+
 
   } catch (error) {
-    console.log(error.response.data)
+    console.log(error.response)
   }
   
 }
