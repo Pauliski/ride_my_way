@@ -1,0 +1,58 @@
+.card-contain {
+  display: flex;
+}
+.offer {
+  height: 250px;
+  width: 240px;
+  background-color: rgb(6, 6, 34);
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer-button-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.offer-button {
+  height: 40px;
+  width: 100px;
+  border-radius: 3px;
+  border: none;
+  background-color: yellow;
+  cursor: pointer;
+}
+.offer-btn {
+  background-color: red;
+  margin-left: 10px;
+  color: #fff;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-disable {
+  background-color: gray;
+  color: white;
+}
+.react-modal {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.Overlay {
+  position: fixed;
+  background-color: black;
+  opacity: 0.97;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

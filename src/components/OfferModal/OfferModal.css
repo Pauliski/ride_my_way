@@ -1,0 +1,31 @@
+.cancel{
+    margin-left: 5px;
+    background-color: red;
+    color: white;
+}
+.offer-modal {
+    height: 250px;
+  width: 240px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .offer-button-modal {
+    height: 40px;
+    width: 100px;
+    border-radius: 3px;
+    border: none;
+    background-color: limegreen;
+    color: white;
+    cursor: pointer;
+  }
+  .cancel {
+    background-color: red ;
+    margin-left: 10px;
+    color: #fff;
+  }

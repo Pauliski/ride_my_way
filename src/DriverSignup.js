@@ -1,23 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Driver.css";
 import { Link } from "@reach/router";
-import useForm from "./useForm";
-import validation from "./validation";
+import useForm from "./components/DriverRegister/useForm";
+import validation from "./components/DriverRegister/validation";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { FaEye } from "react-icons/fa";
+// import {validateSignup} from './validate.js'
 
 const DriverSignup = () => {
   const {
     handleChange,
     handleFormSubmit,
+    handleBlur,
     values,
-    errors,
-    agreeToTerms,
+    errors
   } = useForm(validation);
+  const [agreeToTerms, setAgreeToTerms] = useState(true);
   const [passwordShown, setPasswordShown] = useState(false);
+  const [triedSubmitting, setTriedSubmitting] = useState(false);
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+
+  useEffect(() => {
+    console.log(errors, '--------------');
+    if (triedSubmitting && !errors) {
+      // redirest
+    }
+  }, [errors]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // is submitted
+    setTriedSubmitting(true);
+     handleFormSubmit();
+  }
+  
 
   return (
     <div className="container">
@@ -30,7 +48,7 @@ const DriverSignup = () => {
       <form
         action=""
         className="main-form"
-        onSubmit={handleFormSubmit}
+        onSubmit={handleSubmit}
         noValidate
       >
         <div className="form">
@@ -42,10 +60,12 @@ const DriverSignup = () => {
             type="text"
             placeholder="John"
             name="firstName"
+            onBlur={handleBlur}
             onChange={handleChange}
             required
-            className={errors.firstName === undefined ? "" : "danger"}
+            className={errors.firstName === undefined  ? "" : "danger"}
           />
+          {console.log(errors)}
           {errors.firstName && <p className="errors"> {errors.firstName}</p>}
         </div>
         <div className="form">
@@ -57,6 +77,7 @@ const DriverSignup = () => {
             type="lastName"
             placeholder="Doe"
             name="lastName"
+            onBlur={handleBlur}
             onChange={handleChange}
             required
             className={errors.lastName === undefined ? "" : "danger"}
@@ -72,6 +93,7 @@ const DriverSignup = () => {
             type="email"
             placeholder="mail@mail.com"
             name="email"
+            onBlur={handleBlur}
             onChange={handleChange}
             required
             className={errors.email === undefined ? "" : "danger"}
@@ -87,6 +109,7 @@ const DriverSignup = () => {
             type="number"
             placeholder="070*******"
             name="phoneNumber"
+            onBlur={handleBlur}
             onChange={handleChange}
             required
             className={errors.phoneNumber === undefined ? "" : "danger"}
@@ -104,6 +127,7 @@ const DriverSignup = () => {
       type="text"
       placeholder="LAG*******"
       name="plateNumber"
+      onBlur={handleBlur}
       onChange={handleChange}
       required
       className={errors.plateNumber === undefined ? "" : "danger"}
@@ -135,6 +159,7 @@ const DriverSignup = () => {
             placeholder="*********"
             name="password1"
             onChange={handleChange}
+            onBlur={handleBlur}
             required
             className={errors.password1 === undefined ? "" : "danger"}
           />
@@ -160,6 +185,7 @@ const DriverSignup = () => {
             type={passwordShown ? "text" : "password"}
             placeholder="**********"
             name="confirmPassword"
+            onBlur={handleBlur}
             onChange={handleChange}
             required
             className={errors.confirmPassword === undefined ? "" : "danger"}

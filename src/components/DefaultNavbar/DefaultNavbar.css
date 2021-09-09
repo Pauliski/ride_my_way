@@ -1,0 +1,29 @@
+/* .navUl{
+    justify-content: space-between;
+    z-index: -1;
+    height: 50px;
+  } */
+  .navUl {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    background-color: lightblue;
+    margin: 0;
+    /* padding: 15px 0; */
+    height: 50px;
+   
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+  }
+  .navLink {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  .navLink > a {
+    font-size: 1.5vw;
+    margin: 5px 15px;
+    text-decoration: none;
+    padding: 0;
+    /* color: black; */
+  }

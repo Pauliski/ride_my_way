@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link } from "@reach/router";
+import { Link, useHistory } from "react-router-dom";
 import Pauliski from "./Paul.jpg";
 import { FaBars } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -10,12 +10,22 @@ import { authNavbar, themeDropdown } from "./Array";
 import { DashboardSide } from "./Map";
 import { DashboardSidebar } from "./Array";
 import logo from './pictures/logo.png'
+import { useSelector, useDispatch } from "react-redux";
+import { isLogout } from "./features/passenger/userSlice";
 import "./style.css";
+import { navigate } from "@reach/router";
 
 const Layout2 = (props) => {
+  const history = useHistory()
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch()
   const [isDropdown, setIsDropdown] = useState(false);
   const { toggle } = useContext(SidebarContext);
-
+  const handleLogout = (e)=>{
+      e.preventDefault()
+      dispatch(isLogout())
+      history.push("/")
+  }
   return (
     <div className="layer2" style={{backgroundColor: `${props.background}`}}>
       
@@ -42,10 +52,13 @@ const Layout2 = (props) => {
         <img src={logo} alt="hello" style={{width: '50px', height: '40px'}}/>
         <p>Ride-my-way</p>
       </div> */}
-       
-        <img className="profilePix" alt="trans" src={Pauliski} />
-        <IoMdArrowDropdown
-          style={{ color: `${props.textTheme}`, marginRight: "160px" }}
+       <div style={{display: "flex", alignItems: "center"}}>
+         <img className="profilePix" alt="trans" src={Pauliski} />
+        <span style={{ color: `${props.textTheme}` }}>{user.lastName}</span>
+       </div>
+        
+        <IoMdArrowDropdown className="dropdown-arrow-menu"
+          style={{ color: `${props.textTheme}` }}
           onClick={() => setIsDropdown(!isDropdown)}
         />
        
@@ -60,7 +73,7 @@ const Layout2 = (props) => {
           }}
         >
           <Link to="/profile">Update Profile</Link>
-          <Link to="/">Logout</Link>
+          <span onClick={handleLogout}>Logout</span>
         </div>
       </MapList>
 
@@ -97,18 +110,6 @@ const Layout2 = (props) => {
         </div>
 
         <div className="dashboardSecondDiv"><div className='space'></div>{props.children}</div>
-
-        <div
-          className="dashboardThirdDiv"
-          style={{
-            color: `${props.textTheme}`,
-            backgroundColor: `${props.backgroundTheme}`,
-          }}
-        >
-          Place Your advert here
-         
-         
-        </div>
       </div>
     </div>
   );

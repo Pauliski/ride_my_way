@@ -6,7 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import Pauliski from "./Paul.jpg";
 import { authNavbar, themeDropdown } from "./Array";
 import { MapList } from "./Map";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const LayoutThree = (props) => {

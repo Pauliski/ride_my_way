@@ -1,6 +1,8 @@
 import { Link } from "@reach/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import{ Datalist} from "./Datalist";
 import logo from './pictures/logo.png'
+import {displayCarDetails} from './Array'
 import "./style.css";
 
 export const Map = (props) => {
@@ -31,7 +33,8 @@ export const MapList = (props) => {
       {props.items.map((item) => (
         <li key={item} className={props.className}>
           <Link
-            to={`/${item.toLowerCase()}`}
+            // to={`/${item.toLowerCase()}`}
+            to={`/${item.toLowerCase().replace(/ /g, "")}`}
             style={{
               color: `${props.color}`,
               backgroundColor: `${props.backgroundColor}`,
@@ -73,29 +76,86 @@ export const DashboardSide = (props) => {
 };
 
 export const Available = (props) => {
+  const [trip, setTrip]= useState({location:'', destination: ''})
+  const [amount, setAmount] = useState(0)
+  const [search, setSearch] = useState('')
+  
+  const handleSearch = (e)=>{
+    setSearch(e.target.value)
+  }
+
+
+
+const handleBlur = (e)=>{
+e.target.value = ''
+}
+
+const handleChange = (e, inputId)=>{
+ 
+const {name, value, id} = e.target
+console.log(inputId)
+console.log([name], value)
+if(id === inputId){
+   const allInputElemet = document.getElementsByClassName(inputId)
+   allInputElemet[0].setAttribute('value', e.target.value)
+   setTrip(Object.assign(trip, {location: allInputElemet[0].value, destination: allInputElemet[1].value}))
+   console.log(allInputElemet[2])  
+   if(trip.location === 'Mushin' && trip.destination === 'Oshodi'){
+    // allInputElemet[2].append('Amount: #1500')
+   }
+}
+
+}
+const dest = displayCarDetails.map(item => item.map(eachItem => eachItem.destination))
+const hello = dest.flat()
+console.log(search !== '' && hello.indexOf( search) === -1)
+
+if(search !== '' && hello.indexOf(search) === -1){ 
+  return null}
+const filterRide = hello.filter(ride => {
+  return ride.indexOf(search) !== -1
+})
+  
   return (
+    <>
+    
+    <input type="text"  value={search} onChange={handleSearch}/>
     <div className='cardContainer' style={{backgroundColor: `${props.backgroundColor}`}}>
-
-
 {props.items.map(item =>(
+ 
+ item.map((eachItem, i)=> (
   <div className="flip-card" key={item.id}>
   <div className="flip-card-inner">
     <div className="flip-card-front">
-      <img src={item.src} alt="Avatar" style={{width:'300px'}} />
+      <img src={eachItem.src} alt="Avatar" style={{width:'95%', height: '200px'}} />
+      
+      <label htmlFor="location">
+     Location: <input type='text' list='data' className={eachItem.id}  id={eachItem.id} name={`${eachItem.destination}-i` } onBlur={handleBlur} onChange={(e)=>handleChange(e, eachItem.id)} />
+     <Datalist id='data'/>
+      </label> 
+      <label htmlFor="destination">
+     Destination: <input type='text' className={eachItem.id} value={eachItem.destination} disabled/>
+     <p className={eachItem.id}></p>
+      </label>
+      <button>JOIN RIDE</button>
     </div>
-    <div className="flip-card-back">
+    {/* <div className="flip-card-back">
     <div><img src={item.passport} alt="Avatar" style={{width:'120px', height:'120px', borderRadius: '50%'}} />
+   
    </div>
       <h3>{item.name}</h3> 
       <p>{item.years} years Experience</p> 
       <p>Car model: {item.carModel}</p>
       <button onClick={()=>props.toggleModal(item)}>Order Now</button>
       
-    </div>
+    </div> */}
   </div>
 </div>
+ )
+  
+  )
+  
 ))}
-
 
 
 
@@ -121,13 +181,16 @@ export const Available = (props) => {
         </div>
       ))} */}
     </div>
+  </>
   );
 };
 
 export const MapRecentTrips = (props) => {
   return (
     <div>
-      {props.items.map((item) => (
+      
+        
+      {displayCarDetails.map((item) => (
         <div key={item.name} className='tripDetails'>
           <div className='firstChild'>
             <img src={item.src} alt="hello" className="drivers" />{" "}

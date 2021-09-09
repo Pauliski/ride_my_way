@@ -1,0 +1,9 @@
+.offer-search{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.offer-search-input{
+    /* margin-right: 10px; */
+    width: 90% !important;
+}

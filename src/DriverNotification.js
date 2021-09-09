@@ -14,14 +14,14 @@ const DriverNotification = () => {
 
     setDisplayMessage(filteredItem) 
     }
-    useEffect(() => {
-        const displayNotification = JSON.parse(localStorage.getItem('driversMsg')) || []
-       setDisplayMessage(displayNotification)
-       setNotifyLength(displayNotification.length)
-    }, [])
-    useEffect(() => {
-        localStorage.setItem('driversMsg', JSON.stringify(displayMessage))
-    }, [displayMessage, notifyLength])
+    // useEffect(() => {
+    //     const displayNotification = JSON.parse(localStorage.getItem('driversMsg')) || []
+    //    setDisplayMessage(displayNotification)
+    //    setNotifyLength(displayNotification.length)
+    // }, [])
+    // useEffect(() => {
+    //     localStorage.setItem('driversMsg', JSON.stringify(displayMessage))
+    // }, [displayMessage, notifyLength])
     return ( 
         <div>
             {console.log(notifyLength)}

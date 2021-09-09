@@ -1,0 +1,10 @@
+.login-container {
+    background: url("driver.jpg");
+     display: flex; 
+    /* align-items: center; */
+
+    justify-content: center;
+    /* background-color: #fafafa; */
+    background-size: cover;
+    height: 90vh;
+  }

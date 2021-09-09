@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { IoNotificationsCircle } from "react-icons/io5";
 import {FaHistory} from 'react-icons/fa'
 import {HiStatusOnline} from 'react-icons/hi'
@@ -5,8 +6,6 @@ import {GiSteeringWheel} from 'react-icons/gi'
 import {FcDepartment} from 'react-icons/fc'
 import {BiMap} from 'react-icons/bi'
 import { ImUsers } from "react-icons/im";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { MdStarHalf } from "react-icons/md"
 import { GrCompliance} from "react-icons/gr"
 import { FcCancel} from "react-icons/fc"
 import {getRandomStr} from './IdGenerator'
@@ -20,7 +19,6 @@ import pass1 from './pictures/pass1.png'
 import pass2 from './pictures/pass2.png'
 import pass3 from './pictures/pass3.png'
 import pass4 from './pictures/pass4.png'
-import map from './pictures/map.png'
 import './style.css'
 
 export const authNavbar = [
@@ -39,10 +37,10 @@ export const DashboardSidebar = [
 
 
 export const AvailableRides =[
-  {name: 'Sule', location: 'Kaduna', id: getRandomStr(10), src: car5, passport: pass1, years: 4, carModel: 'Land Rover 2021' },
-  {name: 'Kolade', location: 'Lagos', id: getRandomStr(10), src: car6, passport: pass2, years: 5, carModel: 'DIscussion Continue (Toyata)'},
-  {name: 'Peter', location: 'Lagos', id: getRandomStr(10), src: car7, passport: pass3, years: 6, carModel: 'Siena'},
-  {name: 'Chibuzor', location: 'Imo', id: getRandomStr(10), src: car8, passport: pass4, years: 2, carModel: 'Hummer 2'} 
+  {name: 'Sule', location: 'Kaduna', id: getRandomStr(10), src: car5, passport: pass1, years: 4, carModel: 'Land Rover 2021', destinations:['Oshodi, Mushin, Ikeja, Lekki, Ajah'] },
+  {name: 'Kolade', location: 'Lagos', id: getRandomStr(10), src: car6, passport: pass2, years: 5, carModel: 'DIscussion Continue (Toyata)', destinations:['Oshodi, Mushin, Ikeja, Lekki, Ajah']},
+  {name: 'Peter', location: 'Lagos', id: getRandomStr(10), src: car7, passport: pass3, years: 6, carModel: 'Siena', destinations:['Oshodi, Mushin, Ikeja, Lekki, Ajah']},
+  {name: 'Chibuzor', location: 'Imo', id: getRandomStr(10), src: car8, passport: pass4, years: 2, destinations:['Oshodi, Mushin, Ikeja, Lekki, Ajah']} 
 ]
 
 export const Recent = [
@@ -85,7 +83,7 @@ export const messages = [
 
 export const driversMessages =[]
 //   {sender: 'Ride-my-way',
-//   message: 'This is to inform you that our customer satisfactory is our priority as well as your well being, please stay safe as we prepare your first trip with us',
+//   message: 'This is to inform you that our customer satisfactory is priority as well as your well being, please stay safe as we prepare your first trip with us',
 //   id: getRandomStr(12)
 // },
 // {
@@ -142,4 +140,30 @@ export const CardDetails =[
     destination: ' Apapa, Lagos',
     id: getRandomStr(5)
   }
+]
+
+export const displayCarDetails = [
+
+     [{destination:'Oshodi', src: car5, id: getRandomStr(5)}, {destination:'Ikeja', src: car5, id: getRandomStr(5)}, {destination:'Lekki', src: car5, id: getRandomStr(5)}, {destination:'Mushin', src: car5, id: getRandomStr(5)}, {destination:'Ajah', src: car5, id: getRandomStr(5)}],
+     [{destination:'Apapa', src: car6, id:getRandomStr(5)}, {destination:'Maryland', src: car6, id:getRandomStr(5)}, {destination:'Ikorodu', src: car6, id:getRandomStr(5)}, {destination:'Ojota', src: car6, id:getRandomStr(5)}, {destination:'Costain', src: car6, id:getRandomStr(5)}],
+     [{destination:'Shomolu', src: car7, id:getRandomStr(5)}, {destination:'Ikotun', src: car7, id:getRandomStr(5)}, {destination:'Orile', src: car7, id:getRandomStr(5)}, {destination:'Mushin', src: car7, id:getRandomStr(5)}, {destination:'Iyana-Ipaja', src: car7, id:getRandomStr(5)}]
+]
+
+export const Rides =[
+  {name: 'Sule', location: 'Kaduna', id: getRandomStr(10), src: car5, passport: pass1, carModel: 'Land Rover 2021', destinations: "Ajah", amount: 500, mobile: 8187726949 },
+  {name: 'Kolade', location: 'Lagos', id: getRandomStr(10), src: car6, passport: pass2,  carModel: 'DIscussion Continue (Toyata)', destinations:'Oshodi', amount: 900, mobile: 8187726949  },
+  {name: 'Peter', location: 'Lagos', id: getRandomStr(10), src: car7, passport: pass3,  carModel: 'Siena', destinations:'Mushin', amount: 800, mobile: 8187726949 },
+  {name: 'Chibuzor', location: 'Imo', id: getRandomStr(10), src: car8, passport: pass4,  destinations: 'Ikeja', amount: 700, mobile: 8187726949  },{name: 'Sule', location: 'Kaduna', id: getRandomStr(10), src: car5, passport: pass1, carModel: 'Land Rover 2021', destinations: "Ajah", amount: 500, mobile: 8187726949 },
+  {name: 'Kolade', location: 'Lagos', id: getRandomStr(10), src: car6, passport: pass2,  carModel: 'DIscussion Continue (Toyata)', destinations:'Oshodi', amount: 900, mobile: 8187726949  },
+  {name: 'Peter', location: 'Lagos', id: getRandomStr(10), src: car7, passport: pass3,  carModel: 'Siena', destinations:'Mushin', amount: 800, mobile: 8187726949 },
+  {name: 'Chibuzor', location: 'Imo', id: getRandomStr(10), src: car8, passport: pass4,  destinations: 'Ikeja', amount: 700, mobile: 8187726949  }, {name: 'Sule', location: 'Kaduna', id: getRandomStr(10), src: car5, passport: pass1, carModel: 'Land Rover 2021', destinations: "Ajah", amount: 500, mobile: 8187726949 },
+  {name: 'Kolade', location: 'Lagos', id: getRandomStr(10), src: car6, passport: pass2,  carModel: 'DIscussion Continue (Toyata)', destinations:'Oshodi', amount: 900, mobile: 8187726949  },
+  {name: 'Peter', location: 'Lagos', id: getRandomStr(10), src: car7, passport: pass3,  carModel: 'Siena', destinations:'Mushin', amount: 800, mobile: 8187726949 },
+  {name: 'Chibuzor', location: 'Imo', id: getRandomStr(10), src: car8, passport: pass4,  destinations: 'Ikeja', amount: 700, mobile: 8187726949  }, {name: 'Sule', location: 'Kaduna', id: getRandomStr(10), src: car5, passport: pass1, carModel: 'Land Rover 2021', destinations: "Ajah", amount: 500, mobile: 8187726949 },
+  {name: 'Kolade', location: 'Lagos', id: getRandomStr(10), src: car6, passport: pass2,  carModel: 'DIscussion Continue (Toyata)', destinations:'Oshodi', amount: 900, mobile: 8187726949  },
+  {name: 'Peter', location: 'Lagos', id: getRandomStr(10), src: car7, passport: pass3,  carModel: 'Siena', destinations:'Mushin', amount: 800, mobile: 8187726949 },
+  {name: 'Chibuzor', location: 'Imo', id: getRandomStr(10), src: car8, passport: pass4,  destinations: 'Ikeja', amount: 700, mobile: 8187726949  },{name: 'Sule', location: 'Kaduna', id: getRandomStr(10), src: car5, passport: pass1, carModel: 'Land Rover 2021', destinations: "Ajah", amount: 500, mobile: 8187726949 },
+  {name: 'Kolade', location: 'Lagos', id: getRandomStr(10), src: car6, passport: pass2,  carModel: 'DIscussion Continue (Toyata)', destinations:'Oshodi', amount: 900, mobile: 8187726949  },
+  {name: 'Peter', location: 'Lagos', id: getRandomStr(10), src: car7, passport: pass3,  carModel: 'Siena', destinations:'Mushin', amount: 800, mobile: 8187726949 },
+  {name: 'Chibuzor', location: 'Imo', id: getRandomStr(10), src: car8, passport: pass4,  destinations: 'Ikeja', amount: 700, mobile: 8187726949  }  
 ]
