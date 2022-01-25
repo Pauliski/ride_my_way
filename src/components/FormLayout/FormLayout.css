@@ -1,0 +1,50 @@
+.signup-first-section {
+    padding: 1.875rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    min-height: calc(100vh - 3.125rem);
+  }
+  .first-section {
+    display: none;
+  }
+  @media screen and (min-width: 783px) {
+    .form-sections {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      background: linear-gradient(
+      55deg,
+      rgba(48, 53, 54, 1) 8%,
+      rgba(39, 173, 205, 1) 99%
+    );
+    min-height: calc(100vh - 3.125rem);
+     
+    }
+    .first-section {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+      width: 50%;
+    }
+    .welcome-note {
+      align-self: center;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .signup-driver-btn {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid white;
+      background-color: transparent;
+      color: #ffffff;
+    }
+    .signup-driver-btn:hover {
+      background-color: lightblue;
+      color: black;
+      font-weight: bold;
+    }
+  }
+  

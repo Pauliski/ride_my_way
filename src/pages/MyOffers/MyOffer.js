@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import DriverSidebar from "../../components/DriverSidebar/DriverSidebar";
+import DriverSidebar from "../../components/driver/DriverSidebar/DriverSidebar";
 import Offer from "../../components/Offer/Offer";
 import Search from "../../components/Search/Search";
 import axios from "axios";
 import "./MyOffer.css";
-import DriverNavbar from "../../components/DriverNavbar/DriverNavbar";
+import DriverNavbar from "../../components/driver/DriverNavbar/DriverNavbar";
 import {
   setOffer,
   setOfferdeleted,

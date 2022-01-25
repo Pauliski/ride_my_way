@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
-import HistoryTable from "../../components/DriverHistory/HistoryTable/HistoryTable";
+import HistoryTable from "../../components/driver/DriverHistory/HistoryTable/HistoryTable";
 import UserSideBar from "../../components/sidebar/UserSideBar";
 import Search from "../../components/Search/Search";
 import Navbar from "../../components/navbar/navbar";
-import PassengerHistoryTable from "../../components/PassengerHistory/PassengerHistoryTable/PassengerHistoryTable";
+import PassengerHistoryTable from "../../components/passenger/PassengerHistory/PassengerHistoryTable/PassengerHistoryTable";
 
 function DriverHistory() {
   const [history, setHistory] = useState([]);

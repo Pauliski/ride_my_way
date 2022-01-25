@@ -4,6 +4,7 @@ import jwt_decode from "jwt-decode";
 import {Redirect, Route, withRouter} from 'react-router-dom' 
 import Auth from '../auth'
 import { currentDriver } from '../features/passenger/driverSlice';
+import { getDriver, setDriverState } from '../store/actions/types/driverAction';
 
 function PrivateRoute({component: Component, user, ...rest}) {
   const dispatch = useDispatch()
@@ -12,6 +13,7 @@ function PrivateRoute({component: Component, user, ...rest}) {
   const token = localStorage.getItem('driverToken');
   if(token){
     isAuthenticated = true
+    // setDriverState(dispatch)
   }
 
   return (

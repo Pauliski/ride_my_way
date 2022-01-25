@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Datalist from "./Datalist";
 import logo from './pictures/logo.png'
 import {displayCarDetails} from './Array'
-import "./style.css";
 
 
 

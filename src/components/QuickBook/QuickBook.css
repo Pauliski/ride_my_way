@@ -1,0 +1,37 @@
+.quickbook-wrapper{
+    padding: 3.125rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-title{
+    /* display: flex;
+    justify-content: center; */
+    position: relative;
+    text-align: center;
+}
+.section-title::after{
+    content: "_";
+/* margin-left: -30px; */
+    position: absolute;
+    left: 50%;
+    
+}
+.trip-details{
+    display: grid;
+    grid-column-gap: 20px;
+    position: relative;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    width: 70%;
+}
+.each-trip{
+    text-align: center;
+    /* width: 18.125rem; */
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: lightblue;
+    border-radius: 0.3125rem;
+    margin: 0.625rem;
+    color: #000000;
+}

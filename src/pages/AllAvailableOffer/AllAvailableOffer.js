@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import DriverAvailableOffer from "../../components/DriverAvailableOffer/DriverAvailableOffer";
+import DriverAvailableOffer from "../../components/driver/DriverAvailableOffer/DriverAvailableOffer";
 import Search from "../../components/Search/Search";
-import DriverSidebar from "../../components/DriverSidebar/DriverSidebar";
+import DriverSidebar from "../../components/driver/DriverSidebar/DriverSidebar";
 import './AllAvailableOffer.css'
-import DriverNavbar from "../../components/DriverNavbar/DriverNavbar";
+import DriverNavbar from "../../components/driver/DriverNavbar/DriverNavbar";
 
 function AllAvailableOffer() {
     const [offers, setOffers] = useState([])
@@ -46,7 +46,7 @@ function AllAvailableOffer() {
               <DriverSidebar sidebarOpen={sidebarOpen} closeSidebar={openSidebar}/>
           <div className="display-all">
             {offers.map(item =>(
-                <DriverAvailableOffer location={item.location} passengerId={item.passengerId} destination={item.destination} firstName={item.firstName} lastName={item.lastName} createdAt={item.createdAt} mobileNumber={item.mobileNumber} id={item.offerId} key={item.HistoryId} historyId={item.HistoryId} status={item.status}/>
+                <DriverAvailableOffer location={item.location} passengerId={item.passengerId} destination={item.destination} firstName={item.firstName} lastName={item.lastName} createdAt={item.createdAt} mobileNumber={item.mobileNumber} id={item.offerId} key={item.HistoryId} historyId={item.HistoryId} status={item.status} email={item.email} />
             
                 
             ) )}

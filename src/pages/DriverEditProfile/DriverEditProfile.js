@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import DriverEditProfileCard from '../../components/DriverEditProfileCard/DriverEditProfileCard';
-import DriverNavbar from '../../components/DriverNavbar/DriverNavbar';
-import DriverSidebar from '../../components/DriverSidebar/DriverSidebar';
+import DriverEditProfileCard from '../../components/driver/DriverEditProfileCard/DriverEditProfileCard';
+import DriverNavbar from '../../components/driver/DriverNavbar/DriverNavbar';
+import DriverSidebar from '../../components/driver/DriverSidebar/DriverSidebar';
 
 
 function DriverEditProfile() {

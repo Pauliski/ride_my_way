@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,26 +10,28 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import drive from "./driver.mp4";
 import { SidebarContext } from "./Context/SidebarContext";
-import LayerOne from "./LayerOne";
-import auth from "./auth";
-import UserSideBar from "./components/sidebar/UserSideBar";
-import Navbar from "./components/navbar/navbar";
 import Footer from "./components/Footer/Footer";
+import Navbar from "./components/NavbarSpecial/Navbar";
+import Sidebar from "./components/SidebarSpecial/Sidebar"
+import {FaBars} from 'react-icons/fa'
 
 const Homepage = (props) => {
-  const { isOpen } = useContext(SidebarContext);
+  // const { isOpen } = useContext(SidebarContext);
+  const [sidebarOpen, setsidebarOpen] = useState(false);
+  const openSidebar = () => {
+    setsidebarOpen(!sidebarOpen);
+  };
 
   return (
 <div >
- <LayerOne>
-          {/* <Navbar /> */}
-         {/* <UserSideBar /> */}
-      <main className={isOpen ? "false" : ""}>
+<Navbar openSidebar={openSidebar} />
+<Sidebar sidebarOpen={sidebarOpen} closeSidebar={openSidebar} />
+      <main >
         <div>
-        <video autoPlay muted loop id="myVideo">
+        {/* <video autoPlay muted loop id="myVideo">
           <source src={drive} type="video/mp4" className="videoSource" />
           Your browser does not support HTML5 video.
-        </video>
+        </video> */}
         <h1 className="diplay">
           <span>Get</span>
           <span> a</span>
@@ -95,7 +97,7 @@ const Homepage = (props) => {
          <Footer />
         {/* </footer> */}
       </main>
-    </LayerOne>
+   
 
 </div>
    

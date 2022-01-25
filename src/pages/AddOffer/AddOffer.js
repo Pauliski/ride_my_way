@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import AddOfferForm from '../../components/AddOfferForm/AddOfferForm';
-import DriverNavbar from '../../components/DriverNavbar/DriverNavbar';
-import DriverSidebar from '../../components/DriverSidebar/DriverSidebar'
+import DriverNavbar from '../../components/driver/DriverNavbar/DriverNavbar';
+import DriverSidebar from '../../components/driver/DriverSidebar/DriverSidebar'
 import Navbar from '../../components/navbar/navbar'
 import Search from '../../components/Search/Search'
 

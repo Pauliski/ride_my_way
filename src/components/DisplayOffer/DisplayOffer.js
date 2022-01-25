@@ -4,10 +4,11 @@ import {BsPhone} from 'react-icons/bs'
 import './DisplayOffer.css'
 
 
-function DisplayOffer({name, location, destination, mobile, amount, joinRide, id}) {
+function DisplayOffer({name, location, destination, mobile, amount, joinRide, id, user, driverId, driverEmail}) {
+
     const [disabled, setDisabled]  = useState(false)
     const joinThisRide = ()=>{
-        joinRide(id)
+        joinRide(id, user, driverId, name, driverEmail)
         setDisabled(true)
     }
     return (

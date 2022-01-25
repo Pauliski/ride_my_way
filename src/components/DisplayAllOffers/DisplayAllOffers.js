@@ -4,6 +4,7 @@ import DisplayOffer from "../DisplayOffer/DisplayOffer";
 import axios from "axios";
 import "./DisplayAllOffers.css";
 import { joinRide } from "../../store/actions/types/userAction";
+import { useSelector } from "react-redux";
 
 // const joinRide = async (id) => {
 //   let token;
@@ -31,6 +32,7 @@ import { joinRide } from "../../store/actions/types/userAction";
 
 
 function DisplayAllOffers() {
+  const user = useSelector(state => state.user)
   const [rides, setRides] = useState([])
   useEffect(()=>{
     console.log('You')
@@ -67,7 +69,10 @@ function DisplayAllOffers() {
           destination={item.destination}
           mobile={item.mobileNumber}
           id={item.offerId}
+          driverId={item.driverId}
+          driverEmail={item.email}
           joinRide={joinRide}
+          user={user}
         />
       ))}
     </div>

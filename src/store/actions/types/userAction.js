@@ -127,20 +127,31 @@ export const getUser = async (dispatch)=>{
 
 }
 
-export const joinRide = async (id) => {
+export const joinRide = async (id, user, driverId, name, driverEmail) => {
+console.log(driverEmail)
+console.log('driverId = ', driverId)
   let token = localStorage.getItem('jwtToken')
   console.log(token)
   try {
     const res = await axios.post(
       `http://localhost:3000/v1/join-ride/${id}`,
-      {},
-      {
+      {...user, driverName: name, driverEmail},
+    {  
         headers: {
           Authorization: `Bearer ${token}`,
         },
       }
     );
     if (res.status === 200) {
+      // const sendmail = await axios.post(
+      //   `http://localhost:3000/v1/email/${driverId}`,
+      //   {...user},
+      // {  
+      //     headers: {
+      //       Authorization: `Bearer ${token}`,
+      //     },
+      //   }
+      // );
       swal({
         title: "Request Recieved and Being Process",
         text: "Please wait for your driver confirmation",

@@ -1,11 +1,18 @@
 .containe {
   display: grid;
-  height: 100vh;
-  grid-template-columns: 20% 80% ;
-  grid-template-rows: 0.1fr 3fr;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 80px 10%;
   grid-template-areas:
-    "sidebar nav nav nav"
-    "sidebar main main main";
+    "sidebar nav "
+    "sidebar main ";
+}
+#usersidebar {
+  grid-area: sidebar;
+  min-height: 100%;
+  height: 100vh;
+}
+.navbar {
+  grid-area: nav;
 }
 @media only screen and (max-width: 978px) {
   .containe {
@@ -20,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
 }
-#root{
+#root {
   margin: 0;
   padding: 0;
 }
@@ -132,10 +139,7 @@ body {
   border-radius: 15px;
 }
 
-
-
-
-.dropdown-arrow-menu{
+.dropdown-arrow-menu {
   margin-right: 160px;
 }
 .navLink a:hover {
@@ -147,34 +151,8 @@ body {
   position: absolute;
   color: white;
 }
-.loginForm {
-  /* margin: auto; */
-  display: flex;
-  justify-self: stretch;
-  flex-direction: column;
-  width: 500px;
-  height: 200px;
-  background-color: #3C8DBC;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin-top: 4em;
-}
-.loginForm > input,
-.inputField {
-  height: 30px;
-  width: 100%;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  outline: none;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  border: 1px solid black;
-  z-index: 999;
-}
+
+
 /* .loginForm > input:hover,
 .inputField:hover {
   background-color: black;
@@ -206,21 +184,9 @@ body {
   background-color: #fff;
 }
 
-.signupForm {
-  width: 500px;
-  height: 500px;
-  background-color: lightblue;
-}
 
-.loginPage {
-  background: url("driver.jpg");
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  /* background-color: #fafafa; */
-  background-size: cover;
-  height: 90vh;
-}
+
+
 
 .underline {
   overflow: visible; /* For IE */
@@ -231,19 +197,6 @@ body {
   text-align: center;
   /* position: absolute; */
   top: 10px;
-}
-.underline:after {
-  content: "LOG IN";
-  font-family: "Times New Roman", sans-serif, "Franklin Gothic Medium",
-    "Arial Narrow", Arial, sans-serif;
-  position: relative;
-  top: -0.6em;
-  font-size: 1.5em;
-  padding: 0;
-  background: rgba(179, 177, 165, 1);
-}
-.signup_text::after {
-  content: "SIGN UP";
 }
 
 .Fabar {
@@ -317,7 +270,6 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-
 #myVideo {
   position: relative;
   height: 100vh;
@@ -371,19 +323,17 @@ body {
 }
 .dashboardContainer {
   display: grid;
-  grid-template-columns: 15% 85% ;
+  grid-template-columns: 15% 85%;
   /* grid-column-gap: 20px; */
   /* justify-items: center; */
   justify-content: center;
   width: 100%;
   height: 100vh;
-  
 }
 .dashboardFirstDiv {
   position: relative;
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   height: 100vh;
-  
 }
 .dashboardSecondDiv {
   background-color: beige;
@@ -565,7 +515,6 @@ body {
   margin: 2%;
   width: 230px;
   height: 350px;
- 
 }
 
 .flip-card-inner {
@@ -582,7 +531,7 @@ body {
   transform: rotateY(180deg);
 } */
 
-.flip-card-front{
+.flip-card-front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -590,9 +539,7 @@ body {
   line-height: 25px;
   background-color: #bbb;
   color: black;
-
 }
-
 
 .flip-card-back {
   background-color: #2980b9;
@@ -648,48 +595,39 @@ body {
 .logo > p {
   margin-top: 0;
 }
-.layer3navbarlinks{
+.layer3navbarlinks {
   display: flex;
   align-items: center;
   margin-right: 1rem;
   font-size: 1rem;
 }
-.checkContainer{
-  background-color: #ECF0F5;
+.checkContainer {
+  background-color: #ecf0f5;
   display: grid;
   grid-template-columns: 20% 80%;
-  
 }
-.changeContainerWidth{
-  background-color: #ECF0F5;
+.changeContainerWidth {
+  background-color: #ecf0f5;
   display: grid;
   grid-template-columns: 5% 90%;
   margin: 0px;
-  
 }
-.checkSide{
-  
+.checkSide {
   width: 40px;
   background-color: black;
   height: 100%;
   top: 0;
   padding-top: 20px;
-  
-  
 }
-.checkSide2{
-  
+.checkSide2 {
   background-color: black;
   height: 100%;
   align-self: stretch;
- margin-left: 0;
+  margin-left: 0;
   color: #fff;
   padding: 20px 20px;
-
- 
 }
 .check {
- 
   display: flex;
   flex-wrap: wrap;
   /* height: 1200px; */
@@ -697,9 +635,8 @@ body {
   margin: 0;
   flex-direction: column;
   transition: margin-left 0.5s;
-  
 }
-.checkt{
+.checkt {
   display: flex;
   flex-wrap: wrap;
   /* width: 98%;
@@ -708,25 +645,29 @@ body {
 .icon-toggle {
   margin-left: 9.2rem;
 }
-.layout-top{
+.layout-top {
   margin-left: 1rem;
-  display: flex; 
+  display: flex;
   margin-top: 0.5rem;
 }
-.likesContainer, .starContainer, .completeTripContainer, .cancelTripContainer{
+.likesContainer,
+.starContainer,
+.completeTripContainer,
+.cancelTripContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 85px;
   width: 90px;
-  background-color: #00C0EF;
+  background-color: #00c0ef;
   /* text-align: center; */
-  
 }
-.likes, .cancelTrip, .completeTrip{
+.likes,
+.cancelTrip,
+.completeTrip {
   font-size: 40px;
 }
-.star{
+.star {
   font-size: 20px;
 }
 .checkHead {
@@ -736,12 +677,14 @@ body {
   height: 85px;
   width: 98%;
   margin: 1%;
-
 }
-.checkHeadText, .ratingText, .completeTripText, .cancelTripText{
+.checkHeadText,
+.ratingText,
+.completeTripText,
+.cancelTripText {
   margin-left: 10px;
 }
-.checkBodyContainer{
+.checkBodyContainer {
   display: flex;
   width: 98%;
   margin: 1%;
@@ -753,10 +696,9 @@ body {
   background-color: rgb(117, 115, 124);
   margin-top: 1.3%;
   margin-right: 2%;
-
 }
 
-.checkBodyContent{
+.checkBodyContent {
   border: 1px solid black;
 }
 .checkB {
@@ -768,29 +710,28 @@ body {
   margin: 10px;
   border: 1px solid black;
 }
-.topHead{
+.topHead {
   display: flex;
   margin-top: 5px;
 }
-.secondTopSection{
+.secondTopSection {
   width: 50%;
   display: flex;
 }
-.checkt{
+.checkt {
   width: 50%;
 }
-.topHeadInner{
+.topHeadInner {
   width: 50%;
-  
 }
-.headContainer{
+.headContainer {
   width: 100%;
 }
-.toggleBar{
+.toggleBar {
   margin-left: 10px;
   font-size: 22px;
 }
-.picture{
+.picture {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -799,26 +740,26 @@ body {
   margin-left: 2px;
 }
 
-.settings{
+.settings {
   font-size: 25px;
   margin-left: 5px;
   margin-top: 30px;
   color: #fff;
 }
-.sidePic{
+.sidePic {
   width: 25px;
   height: 25px;
   margin-top: 10px;
 }
-.sidePic2{
+.sidePic2 {
   width: 50px;
   height: 50px;
- margin-right: 10px;
+  margin-right: 10px;
 }
-.imgContainer{
+.imgContainer {
   display: flex;
 }
-.online{
+.online {
   height: 10px;
   width: 10px;
   background-color: green;
@@ -827,47 +768,44 @@ body {
   margin-top: 5px;
 }
 
-.chartContainer{
+.chartContainer {
   position: relative;
   width: 100%;
-  
+
   height: 415px;
   overflow: scroll;
-  
+
   background-color: #fff;
   /* top: 50%; */
   /* left: 50%; */
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   /* transform: translate(-50%, -50%); */
 }
-.chartContainer > h1{
+.chartContainer > h1 {
   margin: 1rem;
- 
 }
-.chart{
+.chart {
   width: 48%;
   /* margin: 1%; */
   padding-top: 1rem;
 }
-.tripChartBox{
+.tripChartBox {
   box-sizing: border-box;
   width: 100%;
   margin: 20px 0;
-} 
-.tripChartBox p{
-  
+}
+.tripChartBox p {
   margin: 0 0.5rem;
   font-weight: bold;
   padding: 0;
 }
-.tripChartBox p:nth-child(2){
- 
+.tripChartBox p:nth-child(2) {
   float: right;
   position: relative;
   top: -30px;
 }
-.tripChart{
-  box-sizing: border-box; 
+.tripChart {
+  box-sizing: border-box;
   width: 100%;
   /* margin: 20px 0; */
   background-color: #262626;
@@ -876,34 +814,31 @@ body {
   border-radius: 2px;
   margin: 0.5rem;
 }
-.tripChartLevel{
-  background-color: #00C0EF;
+.tripChartLevel {
+  background-color: #00c0ef;
   /* width: 90%; */
   height: 3px;
-  
 }
-.layoutThreeContainer{
-  background-color: #3C8DBC;
+.layoutThreeContainer {
+  background-color: #3c8dbc;
   width: 100%;
   height: 70px;
   display: flex;
   align-items: center;
-  
-  
+
   justify-content: space-between;
 }
-.card-container{
+.card-container {
   background-color: #e5e5e5;
   width: 90%;
   height: 96%;
-/* margin-left: 67px; */
-/* margin-right: 5%; */
-margin: 5% 1%;
-display: inline-block;
-box-sizing: border-box;
-  
+  /* margin-left: 67px; */
+  /* margin-right: 5%; */
+  margin: 5% 1%;
+  display: inline-block;
+  box-sizing: border-box;
 }
-.card-container-inner{
+.card-container-inner {
   background-color: #fff;
   width: 86%;
   height: 75%;
@@ -911,26 +846,25 @@ box-sizing: border-box;
   margin-top: 23%;
   border-radius: 5px;
 }
-.card-picture-container{
+.card-picture-container {
   display: inline-block;
   width: 40%;
   height: 40%;
   margin-left: 30%;
   margin-top: -100px;
-
 }
-.card-picture{
+.card-picture {
   border-radius: 50%;
   height: 100%;
   width: 90%;
   background-color: #f0f0f0;
   margin-left: 5%;
 }
-.card-button-container{
+.card-button-container {
   display: flex;
   justify-content: center;
 }
-.card-button{
+.card-button {
   padding: 10px 15px;
   background-color: green;
   color: #fff;
@@ -938,106 +872,94 @@ box-sizing: border-box;
   outline: none;
   border: none;
 }
-.card-button:disabled{
+.card-button:disabled {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
 }
-.card-button2{
+.card-button2 {
   background-color: red;
   margin-left: 10px;
 }
-.card-name{
+.card-name {
   text-align: center;
 }
-.card-info{
+.card-info {
   margin-left: 10px;
   margin-left: 10px;
 }
 
-.search-icon{
+.search-icon {
   font-size: 18px;
   margin-top: 15px;
   margin-left: 5px;
   /* background-color: #999999; */
   text-align: center;
 }
-.search-input{
+.search-input {
   margin-left: 5px;
   width: 220px;
   border-radius: 2px;
   height: 25px;
 }
-.search{
-  
+.search {
   margin-top: 10px;
 }
-.dashboard-text{
+.dashboard-text {
   text-align: center;
   margin-top: 20%;
   font-size: 7vw;
 }
-.hide-display{
+.hide-display {
   display: none;
 }
-.ride-location{
+.ride-location {
   text-transform: capitalize;
   font-size: 18px;
-  
+
   /* width: 100%; */
 }
-.location-input{
+.location-input {
   margin: 0 2%;
   width: 35%;
   height: 40px;
   border-radius: 5px;
 }
-.destination-input{
+.destination-input {
   width: 35%;
   height: 40px;
   border-radius: 5px;
   margin-right: 2%;
 }
-.place-order-button{
-  
-   height: 40px;
-   width: 10%;
+.place-order-button {
+  height: 40px;
+  width: 10%;
   border-radius: 5px;
 }
-.dashboard-top{
- margin-left: 7%;
+.dashboard-top {
+  margin-left: 7%;
 }
-.error-message{
-  display: none;
-  color: red;
-  margin: 0;
-  width: 100%;
-  word-break: break-all;
-}
-.display-error{
-  display: block;
-}
-.input-field-container{
+
+.input-field-container {
   width: 90%;
   /* display: flex; */
   align-items: center;
   /* flex-direction: column; */
 }
-.select-container{
- margin: 5px 0;
- height: 30px;
- border-radius: 5px;
- margin-left: 5%;
- align-self: flex-start;
+.select-container {
+  margin: 5px 0;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 5%;
+  align-self: flex-start;
 }
-select{
+select {
   height: 30px;
   border-radius: 5px;
 }
-.select-span{
-  font-size: 1.25rem
+.select-span {
+  font-size: 1.25rem;
 }
-
 
 @media screen and (max-width: 1035px) {
   .messageBody {
@@ -1050,8 +972,6 @@ select{
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  
- 
   .dashboardThirdDiv {
     display: none;
   }
@@ -1060,13 +980,12 @@ select{
     display: flex;
     width: 100%;
   }
- 
+
   .dashboardSecondDiv {
-   width: 90vw;
-   margin-right: 20px;
+    width: 90vw;
+    margin-right: 20px;
   }
-  
-  
+
   .notification {
     width: 100vw;
   }
@@ -1100,10 +1019,8 @@ select{
   }
 
   .diplay {
-    
   }
   .cardContainer {
-    
     width: 100%;
     margin: 5px auto;
   }
@@ -1113,138 +1030,134 @@ select{
   /* .flip-card {
     width: 100vw;
   } */
-  .location-input, .destination-input{
+  .location-input,
+  .destination-input {
     width: 30%;
   }
-  .place-order-button{
+  .place-order-button {
     width: 20%;
   }
-  .checkBody{
+  .checkBody {
     width: 98%;
     margin: 1%;
     margin-top: 2%;
   }
-  .checkBodyContainer{
+  .checkBodyContainer {
     flex-direction: column;
   }
-  .checkContainer{
-    background-color: #ECF0F5;
+  .checkContainer {
+    background-color: #ecf0f5;
     display: flex;
-    
   }
-  .topHead{
+  .topHead {
     flex-direction: column;
   }
-  .topHeadInner{
+  .topHeadInner {
     width: 100%;
-    
   }
-  .secondTopSection{
+  .secondTopSection {
     width: 98%;
     margin: 0.1% 1%;
   }
-  .headContainer{
+  .headContainer {
     width: 98%;
     margin: 1.4%;
   }
-  .checkHead{
+  .checkHead {
     margin: 0 1%;
   }
-  .checkt{
+  .checkt {
     margin: 1%;
   }
-  .chartContainer{
+  .chartContainer {
     margin: 2%;
   }
-  
-  .checkSide2{
-   position: absolute;
-   z-index: 999;
+
+  .checkSide2 {
+    position: absolute;
+    z-index: 999;
   }
-  .chart{
+  .chart {
     width: 98%;
   }
-  .checksideContainer{
-    position:relative;
+  .checksideContainer {
+    position: relative;
     z-index: 999;
     bottom: 0;
   }
   .icon-toggle {
     margin-left: 3.6rem;
   }
-  .card-container{
+  .card-container {
     background-color: #e5e5e5;
     width: 95%;
     height: 95%;
-  /* margin-left: 67px; */
-  /* margin-right: 5%; */
-  margin: 5% 2%;
-  display: inline-block;
-  box-sizing: border-box;
-    
+    /* margin-left: 67px; */
+    /* margin-right: 5%; */
+    margin: 5% 2%;
+    display: inline-block;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 414px) {
   .icon-toggle {
     margin-left: 3.2rem;
   }
-  
-  .checkt{
+
+  .checkt {
     margin: 0;
     width: 100%;
   }
-  .checkBody{
+  .checkBody {
     width: 94%;
     margin-top: 3%;
-   
   }
-  .headContainer{
+  .headContainer {
     width: 100%;
   }
-  .topHeadInner{
+  .topHeadInner {
     width: 100%;
   }
-  
-  .checkSide{
+
+  .checkSide {
     display: none;
   }
-.checkSide2{
-  height: 100%;
-}
-.checkHead{
-  margin: 1%;
-}
-  .secondTopSection, .headContainer{
+  .checkSide2 {
+    height: 100%;
+  }
+  .checkHead {
+    margin: 1%;
+  }
+  .secondTopSection,
+  .headContainer {
     flex-direction: column;
   }
-  .headContainer{
+  .headContainer {
     width: 96%;
     margin: 0.5% 2%;
   }
-  .chartContainer{
+  .chartContainer {
     width: 98%;
     margin: 1%;
   }
-  .checkBodyContainer{
+  .checkBodyContainer {
     width: 96%;
   }
-  .chart, .chartContainer{
+  .chart,
+  .chartContainer {
     width: 98%;
-   
   }
-  .card-container{
+  .card-container {
     background-color: #e5e5e5;
     width: 95%;
     height: 98%;
-  /* margin-left: 67px; */
-  /* margin-right: 5%; */
-  margin: 5% 1%;
-  display: inline-block;
-  box-sizing: border-box;
-    
+    /* margin-left: 67px; */
+    /* margin-right: 5%; */
+    margin: 5% 1%;
+    display: inline-block;
+    box-sizing: border-box;
   }
-  .card-container-inner{
-   
+  .card-container-inner {
     width: 86%;
     height: 82%;
     margin-left: 7%;
@@ -1252,65 +1165,61 @@ select{
     border-radius: 5px;
     margin-bottom: 10px;
   }
-  .card-info{
+  .card-info {
     margin-top: 2px;
   }
-  .card-picture{
+  .card-picture {
     width: 70px;
     height: 70px;
   }
-  .card-picture-container{
+  .card-picture-container {
     height: 20%;
   }
   .navLink > a {
     font-size: 3.5vw;
-   
   }
-  .dropdown-arrow-menu{
+  .dropdown-arrow-menu {
     margin-right: 2px;
-    
   }
-  .dropdown-content-show{
+  .dropdown-content-show {
     margin-top: 2px;
     right: 2px;
     margin-right: 2px;
   }
-  .dashboardFirstDiv{
+  .dashboardFirstDiv {
     display: none;
   }
-  .dashboardSecondDiv{
-   width: 100vw;
+  .dashboardSecondDiv {
+    width: 100vw;
   }
-  .search{
+  .search {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .search-input{
+  .search-input {
     width: 70%;
   }
-  .search-icon{
+  .search-icon {
     display: none;
     margin: 10px 0;
   }
-  .location-input, .destination-input{
+  .location-input,
+  .destination-input {
     margin-top: 10px;
   }
-  .place-order-button{
+  .place-order-button {
     margin-top: 10px;
     width: 40%;
   }
-  .profilePix{
+  .profilePix {
     position: absolute;
     right: 5px;
-  
-  }
-  
-  
-  .navLink{
-    display: none;
   }
 
+  .navLink {
+    display: none;
+  }
 }
 
 @keyframes animate {

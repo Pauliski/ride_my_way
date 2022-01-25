@@ -1,0 +1,44 @@
+.top-navbar{
+    padding: 0.625rem 2.1875rem;
+   align-items: center;
+}
+
+.contact-details{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+    
+}
+.login-links-wrapper{
+    display: none;
+}
+.passenger-login-link{
+    display: block;
+}
+
+
+@media screen and (min-width: 783px) {
+    .hamburger{
+        display: none;
+    }
+    .top-navbar{
+        display: flex;
+        justify-content: space-between;
+        height: 3.125rem;
+    }
+    .contact-details{
+        width: 50%;
+    }
+    .login-links-wrapper{
+        display: block;
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .login-link{
+        margin-left: 0.9375rem;
+    }
+}
+

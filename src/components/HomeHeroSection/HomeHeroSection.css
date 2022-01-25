@@ -1,0 +1,43 @@
+.hero-section-wrapper{
+    display: none;
+  }
+.image-container{
+    /* min-height: 100%; */
+    height: 450px;
+    position: relative;
+    background-image: url("/src/driv2.jpg");
+    background-size: cover;
+    overflow: hidden;
+  }
+  .overlay{
+    background-color: rgba(3, 169, 244, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  @media screen and (min-width: 783px) {
+    .hero-section-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.625rem 2.1875rem;
+    }
+    .links-wrapper{
+        display: flex;
+    }
+    .links-buttons-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .smooth-link{
+      margin: 0 0.625rem;
+    }
+    .signup-button{
+      margin-left: 0.3125rem;
+      padding: 0.3125rem;
+      border: 1px solid black;
+    }
+  }
+  

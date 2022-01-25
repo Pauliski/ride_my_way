@@ -1,14 +1,14 @@
 import React from "react";
 import "./index.css";
 import { Route, Switch } from "react-router-dom";
-import Homepage from "./Homepage";
-import Login from "./Login";
+import Homepage from "./pages/Homepage/Homepage";
+import Login from "./pages/Homepage/Homepage";
 import Dashboard from "./Dashboard";
-import Signup from "./Signup";
+import Signup from "./pages/Signup/Signup";
 import ThemeContextProvider from "./Context/ThemeContext";
 import AvailableRide from "./AvailableRide";
 import RecentTrip from "./RecentTrip";
-import DriverDashboard from "../src/components/DriverDashboard/DriverDashboard";
+import DriverDashboard from "../src/components/driver/DriverDashboard/DriverDashboard";
 import Card from "./Card";
 import RecentTemplate from "./RecentTemplate";
 import SignupUpload from "./SignupUpload";
@@ -18,16 +18,18 @@ import Upload from "./pages/ImageUpload/ImageUpload";
 import Offer from "./components/Offer/Offer";
 import DisplayOffer from "./components/DisplayOffer/DisplayOffer";
 import AllOffers from "./pages/AllOffers/AllOffers";
-import DriverRegister from "./components/DriverRegister/DriverRegister";
+import DriverRegister from "./pages/DriverSignup/DriverSignup";
 import AllAvailableOffer from "./pages/AllAvailableOffer/AllAvailableOffer";
 import AddOffer from "./pages/AddOffer/AddOffer";
 import MyOffer from "./pages/MyOffers/MyOffer";
-import LoginPage from "./pages/LoginPage/LoginPage";
+import LoginPage from "./pages/Login/Login";
 import Modal from "react-modal";
 import PrivateRoute from "./validation/PrivateRoute";
 import DriverEditProfile from "./pages/DriverEditProfile/DriverEditProfile";
 import DriverHistory from "./pages/DriverHistory/DriverHistory";
 import PassengerHistory from './pages/PassengerHistory/PassengerHistory'
+import Input from "./components/reuseable/input/Input";
+import Test from "./components/reuseable/Test";
 
 Modal.setAppElement("#root");
 
@@ -35,6 +37,8 @@ function App() {
   return (
     <Switch>
       <ThemeContextProvider>
+      <Route component={Test} exact path="/test" />
+      <Route component={Input} exact path="/input" />
         <Route component={Homepage} exact path="/" />
         <Route component={Homepage} path="/home" />
         <Route component={LoginPage} path="/login" />
